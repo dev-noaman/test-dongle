@@ -1,0 +1,45 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - img [ref=e14]
+    - img [ref=e20]
+    - img [ref=e25]
+    - generic [ref=e29]:
+      - img [ref=e32]
+      - heading "Performance Freight" [level=1] [ref=e74]:
+        - text: Performance
+        - text: Freight
+      - paragraph [ref=e36]: Your complete freight management platform. Track shipments, manage orders, and streamline logistics across borders.
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - paragraph [ref=e39]: 24/7
+          - paragraph [ref=e40]: Tracking
+        - generic [ref=e42]:
+          - paragraph [ref=e43]: Multi
+          - paragraph [ref=e44]: Currency
+        - generic [ref=e46]:
+          - paragraph [ref=e47]: Real-time
+          - paragraph [ref=e48]: Reports
+  - generic [ref=e50]:
+    - button "العربية" [active] [ref=e75]:
+      - img [ref=e53]
+      - generic [ref=e56]: العربية
+    - generic [ref=e57]:
+      - heading "Welcome back" [level=2] [ref=e76]
+      - paragraph [ref=e59]: Sign in to your account to continue
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - generic [ref=e62]: Email address
+        - textbox "Email address" [ref=e77]:
+          - /placeholder: you@example.com
+      - generic [ref=e64]:
+        - generic [ref=e65]: Password
+        - textbox "Password" [ref=e78]:
+          - /placeholder: Enter your password
+      - generic [ref=e68] [cursor=pointer]:
+        - checkbox "Remember me" [ref=e79]
+        - generic [ref=e70]: Remember me
+      - button "Sign in" [ref=e80]:
+        - generic [ref=e72]:
+          - text: Sign in
+          - img
+    - paragraph [ref=e73]: Performance Freight Management System

@@ -1,0 +1,189 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e10]:
+        - text: بيرفورمانس
+        - generic [ref=e11]: فريت
+    - navigation [ref=e12]:
+      - generic [ref=e13]:
+        - paragraph [ref=e14]: الرئيسية
+        - link "لوحة التحكم" [ref=e16] [cursor=pointer]:
+          - /url: /
+          - img [ref=e17]
+          - generic [ref=e22]: لوحة التحكم
+      - generic [ref=e23]:
+        - paragraph [ref=e24]: العمليات
+        - generic [ref=e25]:
+          - link "الطلبات" [ref=e26] [cursor=pointer]:
+            - /url: /orders
+            - img [ref=e27]
+            - generic [ref=e31]: الطلبات
+          - link "الشحنات" [ref=e32] [cursor=pointer]:
+            - /url: /shipments
+            - img [ref=e33]
+            - generic [ref=e37]: الشحنات
+          - link "المشتريات" [ref=e39] [cursor=pointer]:
+            - /url: /purchases
+            - img [ref=e40]
+            - generic [ref=e44]: المشتريات
+      - generic [ref=e45]:
+        - paragraph [ref=e46]: المالية
+        - generic [ref=e47]:
+          - link "الفواتير" [ref=e48] [cursor=pointer]:
+            - /url: /invoices
+            - img [ref=e49]
+            - generic [ref=e52]: الفواتير
+          - link "المدفوعات" [ref=e53] [cursor=pointer]:
+            - /url: /payments
+            - img [ref=e54]
+            - generic [ref=e56]: المدفوعات
+          - link "الخزينة" [ref=e57] [cursor=pointer]:
+            - /url: /finance/treasury
+            - img [ref=e58]
+            - generic [ref=e61]: الخزينة
+          - link "أسعار الصرف" [ref=e62] [cursor=pointer]:
+            - /url: /finance/exchange-rates
+            - img [ref=e63]
+            - generic [ref=e65]: أسعار الصرف
+      - generic [ref=e66]:
+        - paragraph [ref=e67]: الأشخاص
+        - generic [ref=e68]:
+          - link "العملاء" [ref=e69] [cursor=pointer]:
+            - /url: /customers
+            - img [ref=e70]
+            - generic [ref=e75]: العملاء
+          - link "الوكلاء" [ref=e76] [cursor=pointer]:
+            - /url: /agents
+            - img [ref=e77]
+            - generic [ref=e81]: الوكلاء
+      - generic [ref=e82]:
+        - paragraph [ref=e83]: الإعدادات
+        - generic [ref=e84]:
+          - link "أسعار الشحن" [ref=e85] [cursor=pointer]:
+            - /url: /shipping-rates
+            - img [ref=e86]
+            - generic [ref=e89]: أسعار الشحن
+          - link "الدول" [ref=e90] [cursor=pointer]:
+            - /url: /settings/countries
+            - img [ref=e91]
+            - generic [ref=e94]: الدول
+          - link "المستخدمين" [ref=e95] [cursor=pointer]:
+            - /url: /settings/users
+            - img [ref=e96]
+            - generic [ref=e98]: المستخدمين
+          - link "الإعدادات" [ref=e99] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e100]
+            - generic [ref=e103]: الإعدادات
+          - link "سجل التدقيق" [ref=e104] [cursor=pointer]:
+            - /url: /settings/audit-log
+            - img [ref=e105]
+            - generic [ref=e110]: سجل التدقيق
+          - link "التقارير" [ref=e111] [cursor=pointer]:
+            - /url: /reports
+            - img [ref=e112]
+            - generic [ref=e114]: التقارير
+    - generic [ref=e116]:
+      - generic [ref=e117]: A
+      - generic [ref=e118]:
+        - paragraph [ref=e119]: Admin
+        - paragraph [ref=e120]: admin@shipping.test
+  - generic [ref=e121]:
+    - banner [ref=e122]:
+      - generic [ref=e123] [cursor=pointer]:
+        - img [ref=e124]
+        - generic [ref=e127]: البحث في الطلبات، الشحنات...
+        - generic [ref=e128]: /
+      - generic [ref=e129]:
+        - button "AR" [ref=e130]:
+          - img [ref=e131]
+          - generic [ref=e134]: AR
+        - button "التبديل إلى light" [ref=e135]:
+          - img [ref=e136]
+        - button "الإشعارات" [ref=e138]:
+          - img [ref=e139]
+        - generic [ref=e143]:
+          - generic [ref=e144]:
+            - paragraph [ref=e145]: Admin
+            - paragraph [ref=e146]: admin
+          - generic [ref=e147]: A
+          - button "تسجيل الخروج" [ref=e148]:
+            - img [ref=e149]
+    - main [ref=e152]:
+      - generic [ref=e153]:
+        - generic [ref=e154]:
+          - link [ref=e155] [cursor=pointer]:
+            - /url: /shipments
+            - button [ref=e156]:
+              - img
+          - heading "إنشاء شحنة" [level=1] [ref=e157]
+        - generic [ref=e158]:
+          - generic [ref=e160]: تفاصيل الشحنة
+          - generic [ref=e162]:
+            - generic [ref=e163]:
+              - generic [ref=e164]:
+                - generic [ref=e165]: المصدر *
+                - button "المصدر * الوجهة *" [ref=e167]:
+                  - generic [ref=e168]: اختر المصدر
+                  - img [ref=e169]
+              - generic [ref=e171]:
+                - generic [ref=e172]: الوجهة *
+                - button "اختر الوجهة" [ref=e174]:
+                  - generic [ref=e175]: اختر الوجهة
+                  - img [ref=e176]
+            - generic [ref=e178]:
+              - generic [ref=e179]:
+                - generic [ref=e180]: تاريخ الإرسال *
+                - textbox [ref=e181]: 2026-03-16
+              - generic [ref=e182]:
+                - generic [ref=e183]: الوصول المتوقع
+                - textbox [ref=e184]
+              - generic [ref=e185]:
+                - generic [ref=e186]: طريقة الشحن
+                - combobox [ref=e187]:
+                  - generic: جوي
+                  - img
+                - combobox [ref=e188]
+            - generic [ref=e189]:
+              - generic [ref=e190]:
+                - generic [ref=e191]: الوزن الإجمالي (كجم)
+                - spinbutton [ref=e192]
+              - generic [ref=e193]:
+                - generic [ref=e194]: عدد الحقائب
+                - spinbutton [ref=e195]
+              - generic [ref=e196]:
+                - generic [ref=e197]: رقم الرحلة
+                - textbox "e.g. MS 123" [ref=e198]
+            - generic [ref=e199]:
+              - generic [ref=e200]:
+                - generic [ref=e201]: تكلفة السفر
+                - spinbutton [ref=e202]
+              - generic [ref=e203]:
+                - generic [ref=e204]: عملة التكلفة
+                - combobox [ref=e205]:
+                  - generic: EGP
+                  - img
+                - combobox [ref=e206]
+              - generic [ref=e207]:
+                - generic [ref=e208]: الحالة
+                - combobox [ref=e209]:
+                  - generic: قيد التجهيز
+                  - img
+                - combobox [ref=e210]
+            - generic [ref=e211]:
+              - generic [ref=e212]:
+                - generic [ref=e213]: اسم الناقل
+                - textbox "e.g. DHL, Aramex, UPS" [ref=e214]
+              - generic [ref=e215]:
+                - generic [ref=e216]: رقم التتبع
+                - textbox "e.g. 1234567890" [ref=e217]
+            - generic [ref=e218]:
+              - generic [ref=e219]: ملاحظات
+              - textbox "shipments.notes_placeholder" [ref=e220]
+            - generic [ref=e221]:
+              - button "إنشاء شحنة" [ref=e222]
+              - link "إلغاء" [ref=e223] [cursor=pointer]:
+                - /url: /shipments
+                - button "إلغاء" [ref=e224]
+  - region "Notifications alt+T"

@@ -1,0 +1,4 @@
+[POST] http://localhost:8000/orders => [302] Found
+[GET] http://localhost:8000/orders/create => [200] OK
+[POST] http://localhost:8000/orders => [302] Found
+[GET] http://localhost:8000/orders/create => [200] OK

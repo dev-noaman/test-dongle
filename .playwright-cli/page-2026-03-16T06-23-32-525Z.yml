@@ -1,0 +1,214 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e10]:
+        - text: بيرفورمانس
+        - generic [ref=e11]: فريت
+    - navigation [ref=e12]:
+      - generic [ref=e13]:
+        - paragraph [ref=e14]: الرئيسية
+        - link "لوحة التحكم" [ref=e16] [cursor=pointer]:
+          - /url: /
+          - img [ref=e17]
+          - generic [ref=e22]: لوحة التحكم
+      - generic [ref=e23]:
+        - paragraph [ref=e24]: العمليات
+        - generic [ref=e25]:
+          - link "الطلبات" [ref=e26] [cursor=pointer]:
+            - /url: /orders
+            - img [ref=e27]
+            - generic [ref=e31]: الطلبات
+          - link "الشحنات" [ref=e32] [cursor=pointer]:
+            - /url: /shipments
+            - img [ref=e33]
+            - generic [ref=e37]: الشحنات
+          - link "المشتريات" [ref=e38] [cursor=pointer]:
+            - /url: /purchases
+            - img [ref=e39]
+            - generic [ref=e43]: المشتريات
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: المالية
+        - generic [ref=e46]:
+          - link "الفواتير" [ref=e47] [cursor=pointer]:
+            - /url: /invoices
+            - img [ref=e48]
+            - generic [ref=e51]: الفواتير
+          - link "المدفوعات" [ref=e52] [cursor=pointer]:
+            - /url: /payments
+            - img [ref=e53]
+            - generic [ref=e55]: المدفوعات
+          - link "الخزينة" [ref=e56] [cursor=pointer]:
+            - /url: /finance/treasury
+            - img [ref=e57]
+            - generic [ref=e60]: الخزينة
+          - link "أسعار الصرف" [ref=e61] [cursor=pointer]:
+            - /url: /finance/exchange-rates
+            - img [ref=e62]
+            - generic [ref=e64]: أسعار الصرف
+      - generic [ref=e65]:
+        - paragraph [ref=e66]: الأشخاص
+        - generic [ref=e67]:
+          - link "العملاء" [ref=e68] [cursor=pointer]:
+            - /url: /customers
+            - img [ref=e69]
+            - generic [ref=e74]: العملاء
+          - link "الوكلاء" [ref=e75] [cursor=pointer]:
+            - /url: /agents
+            - img [ref=e76]
+            - generic [ref=e80]: الوكلاء
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: الإعدادات
+        - generic [ref=e83]:
+          - link "أسعار الشحن" [ref=e84] [cursor=pointer]:
+            - /url: /shipping-rates
+            - img [ref=e85]
+            - generic [ref=e88]: أسعار الشحن
+          - link "الدول" [ref=e89] [cursor=pointer]:
+            - /url: /settings/countries
+            - img [ref=e90]
+            - generic [ref=e93]: الدول
+          - link "المستخدمين" [ref=e94] [cursor=pointer]:
+            - /url: /settings/users
+            - img [ref=e95]
+            - generic [ref=e97]: المستخدمين
+          - link "الإعدادات" [ref=e98] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e99]
+            - generic [ref=e102]: الإعدادات
+          - link "سجل التدقيق" [ref=e103] [cursor=pointer]:
+            - /url: /settings/audit-log
+            - img [ref=e104]
+            - generic [ref=e109]: سجل التدقيق
+          - link "التقارير" [ref=e110] [cursor=pointer]:
+            - /url: /reports
+            - img [ref=e111]
+            - generic [ref=e113]: التقارير
+    - generic [ref=e115]:
+      - generic [ref=e116]: A
+      - generic [ref=e117]:
+        - paragraph [ref=e118]: Admin
+        - paragraph [ref=e119]: admin@shipping.test
+  - generic [ref=e120]:
+    - banner [ref=e121]:
+      - generic [ref=e122] [cursor=pointer]:
+        - img [ref=e123]
+        - generic [ref=e126]: البحث في الطلبات، الشحنات...
+        - generic [ref=e127]: /
+      - generic [ref=e128]:
+        - button "AR" [ref=e129]:
+          - img [ref=e130]
+          - generic [ref=e133]: AR
+        - button "التبديل إلى light" [ref=e134]:
+          - img [ref=e135]
+        - button "الإشعارات" [ref=e137]:
+          - img [ref=e138]
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - paragraph [ref=e144]: Admin
+            - paragraph [ref=e145]: admin
+          - generic [ref=e146]: A
+          - button "تسجيل الخروج" [ref=e147]:
+            - img [ref=e148]
+    - main [ref=e151]:
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - img [ref=e156]
+            - generic [ref=e159]:
+              - heading "الطلبات" [level=1] [ref=e160]
+              - paragraph [ref=e161]: لا توجد طلبات
+          - generic [ref=e162]:
+            - button "عرض كانبان" [ref=e163]:
+              - img
+            - link "إنشاء طلب" [ref=e164] [cursor=pointer]:
+              - /url: /orders/create
+              - button "إنشاء طلب" [ref=e165]:
+                - img
+                - text: إنشاء طلب
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - img [ref=e169]
+            - textbox "بحث..." [ref=e172]
+          - combobox [ref=e173]:
+            - generic: الحالة
+            - img
+          - combobox [ref=e174]
+          - combobox [ref=e175]:
+            - generic: العميل
+            - img
+          - combobox [ref=e176]
+          - button "تصفية" [ref=e177]
+        - table [ref=e180]:
+          - rowgroup [ref=e181]:
+            - row "رقم الطلب العميل تاريخ الإنشاء دولة المصدر / دولة الوجهة نوع الخدمة الحالة الوزن حالة الدفع الشحنة الإجراءات" [ref=e182]:
+              - columnheader [ref=e183]:
+                - checkbox [ref=e184]
+              - columnheader "رقم الطلب" [ref=e185] [cursor=pointer]:
+                - generic [ref=e186]:
+                  - text: رقم الطلب
+                  - img [ref=e187]
+              - columnheader "العميل" [ref=e190] [cursor=pointer]:
+                - generic [ref=e191]:
+                  - text: العميل
+                  - img [ref=e192]
+              - columnheader "تاريخ الإنشاء" [ref=e195] [cursor=pointer]:
+                - generic [ref=e196]:
+                  - text: تاريخ الإنشاء
+                  - img [ref=e197]
+              - columnheader "دولة المصدر / دولة الوجهة" [ref=e200]
+              - columnheader "نوع الخدمة" [ref=e201] [cursor=pointer]:
+                - generic [ref=e202]:
+                  - text: نوع الخدمة
+                  - img [ref=e203]
+              - columnheader "الحالة" [ref=e206] [cursor=pointer]:
+                - generic [ref=e207]:
+                  - text: الحالة
+                  - img [ref=e208]
+              - columnheader "الوزن" [ref=e211] [cursor=pointer]:
+                - generic [ref=e212]:
+                  - text: الوزن
+                  - img [ref=e213]
+              - columnheader "حالة الدفع" [ref=e216]
+              - columnheader "الشحنة" [ref=e217]
+              - columnheader "الإجراءات" [ref=e218]
+          - rowgroup [ref=e219]:
+            - row "ORD-20260313-0001 Ahmed Hassan 3/13/2026 → شحن 10.0 kg مدفوع غير معين" [ref=e220] [cursor=pointer]:
+              - cell [ref=e221]:
+                - checkbox [ref=e222]
+              - cell "ORD-20260313-0001" [ref=e223]
+              - cell "Ahmed Hassan" [ref=e224]
+              - cell "3/13/2026" [ref=e225]
+              - cell "→" [ref=e226]
+              - cell "شحن" [ref=e227]
+              - cell [ref=e228]:
+                - combobox [ref=e229]:
+                  - generic [ref=e230]: جديد
+                  - img
+              - cell "10.0 kg" [ref=e231]
+              - cell "مدفوع" [ref=e232]
+              - cell "غير معين" [ref=e233]
+              - cell [ref=e234]:
+                - generic [ref=e235]:
+                  - link [ref=e236]:
+                    - /url: /orders/1
+                    - button [ref=e237]:
+                      - img
+                  - link [ref=e238]:
+                    - /url: /orders/1/edit
+                    - button [ref=e239]:
+                      - img
+                  - button [ref=e240]:
+                    - img
+        - generic [ref=e241]:
+          - paragraph [ref=e242]: عرض 1 من 1 نتائج
+          - generic [ref=e243]:
+            - button "السابق" [disabled]:
+              - generic: السابق
+            - link "1" [ref=e244] [cursor=pointer]:
+              - /url: https://performance.noaman.cloud/orders?page=1
+              - button "1" [ref=e245]:
+                - generic [ref=e246]: "1"
+            - button "التالي" [disabled]:
+              - generic: التالي
+  - region "Notifications alt+T"

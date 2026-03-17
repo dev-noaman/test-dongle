@@ -1,0 +1,242 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e68]:
+    - complementary [ref=e69]:
+      - generic [ref=e70]:
+        - img [ref=e72]
+        - generic [ref=e75]:
+          - text: Performance
+          - generic [ref=e76]: Freight
+      - navigation [ref=e77]:
+        - generic [ref=e78]:
+          - paragraph [ref=e79]: Main
+          - link "Dashboard" [ref=e81] [cursor=pointer]:
+            - /url: /
+            - img [ref=e82]
+            - text: Dashboard
+        - generic [ref=e88]:
+          - paragraph [ref=e89]: Operations
+          - generic [ref=e90]:
+            - link "Orders" [ref=e91] [cursor=pointer]:
+              - /url: /orders
+              - img [ref=e92]
+              - text: Orders
+            - link "Shipments" [ref=e96] [cursor=pointer]:
+              - /url: /shipments
+              - img [ref=e97]
+              - text: Shipments
+        - generic [ref=e101]:
+          - paragraph [ref=e102]: Finance
+          - generic [ref=e103]:
+            - link "Invoices" [ref=e104] [cursor=pointer]:
+              - /url: /invoices
+              - img [ref=e105]
+              - text: Invoices
+            - link "Payments" [ref=e108] [cursor=pointer]:
+              - /url: /payments
+              - img [ref=e109]
+              - text: Payments
+        - generic [ref=e111]:
+          - paragraph [ref=e112]: People
+          - link "Customers" [ref=e114] [cursor=pointer]:
+            - /url: /customers
+            - img [ref=e115]
+            - text: Customers
+        - generic [ref=e120]:
+          - paragraph [ref=e121]: Settings
+          - link "Reports" [ref=e123] [cursor=pointer]:
+            - /url: /reports
+            - img [ref=e124]
+            - text: Reports
+      - generic [ref=e127]:
+        - generic [ref=e128]: A
+        - generic [ref=e129]:
+          - paragraph [ref=e130]: Admin
+          - paragraph [ref=e131]: admin@shipping.test
+    - generic [ref=e132]:
+      - banner [ref=e133]:
+        - generic [ref=e134] [cursor=pointer]:
+          - img [ref=e135]
+          - generic [ref=e138]: Search orders, shipments...
+          - generic [ref=e139]: /
+        - generic [ref=e140]:
+          - button "EN" [ref=e141]:
+            - img [ref=e142]
+            - generic [ref=e145]: EN
+          - button "Switch to light mode" [ref=e146]:
+            - img [ref=e147]
+          - button "Notifications" [ref=e149]:
+            - img [ref=e150]
+          - generic [ref=e154]:
+            - generic [ref=e155]:
+              - paragraph [ref=e156]: Admin
+              - paragraph [ref=e157]: sales
+            - generic [ref=e158]: A
+            - button "Sign out" [ref=e159]:
+              - img [ref=e160]
+      - main [ref=e163]:
+        - generic [ref=e164]:
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - heading "Dashboard" [level=1] [ref=e167]
+              - paragraph [ref=e168]: Overview of your shipping operations
+            - generic [ref=e169]:
+              - img [ref=e170]
+              - generic [ref=e172]: Live
+          - generic [ref=e173]:
+            - link "Total Orders 1 1 active" [ref=e174] [cursor=pointer]:
+              - /url: /orders
+              - generic [ref=e175]:
+                - generic [ref=e178]:
+                  - generic [ref=e179]:
+                    - paragraph [ref=e180]: Total Orders
+                    - paragraph [ref=e181]: "1"
+                    - generic [ref=e182]:
+                      - img [ref=e183]
+                      - generic [ref=e186]: 1 active
+                  - img [ref=e188]
+                - img [ref=e193]
+            - link "Shipments 0 0 total" [ref=e195] [cursor=pointer]:
+              - /url: /shipments
+              - generic [ref=e196]:
+                - generic [ref=e199]:
+                  - generic [ref=e200]:
+                    - paragraph [ref=e201]: Shipments
+                    - paragraph [ref=e202]: "0"
+                    - generic [ref=e203]:
+                      - img [ref=e204]
+                      - generic [ref=e207]: 0 total
+                  - img [ref=e209]
+                - img [ref=e214]
+            - link "Invoices 2 0 pending" [ref=e216] [cursor=pointer]:
+              - /url: /invoices
+              - generic [ref=e217]:
+                - generic [ref=e220]:
+                  - generic [ref=e221]:
+                    - paragraph [ref=e222]: Invoices
+                    - paragraph [ref=e223]: "2"
+                    - generic [ref=e225]: 0 pending
+                  - img [ref=e227]
+                - img [ref=e231]
+            - link "Revenue E£ 0.00 E£ 0 pending" [ref=e233] [cursor=pointer]:
+              - /url: /finance/treasury
+              - generic [ref=e234]:
+                - generic [ref=e237]:
+                  - generic [ref=e238]:
+                    - paragraph [ref=e239]: Revenue
+                    - paragraph [ref=e240]: E£ 0.00
+                    - generic [ref=e241]:
+                      - img [ref=e242]
+                      - generic [ref=e245]: E£ 0 pending
+                  - img [ref=e247]
+                - img [ref=e250]
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - img [ref=e255]
+              - generic [ref=e258]:
+                - paragraph [ref=e259]: Pending
+                - paragraph [ref=e260]: "1"
+            - generic [ref=e261]:
+              - img [ref=e263]
+              - generic [ref=e267]:
+                - paragraph [ref=e268]: In Progress
+                - paragraph [ref=e269]: "0"
+            - generic [ref=e270]:
+              - img [ref=e272]
+              - generic [ref=e275]:
+                - paragraph [ref=e276]: Completed
+                - paragraph [ref=e277]: "0"
+            - generic [ref=e278]:
+              - img [ref=e280]
+              - generic [ref=e283]:
+                - paragraph [ref=e284]: Paid Invoices
+                - paragraph [ref=e285]: "2"
+          - generic [ref=e286]:
+            - generic [ref=e287]:
+              - generic [ref=e289]:
+                - img [ref=e291]
+                - generic [ref=e294]: Monthly Revenue
+              - application [ref=e298]:
+                - generic [ref=e302]:
+                  - generic [ref=e303]:
+                    - generic [ref=e305]: Oct 2025
+                    - generic [ref=e307]: Nov 2025
+                    - generic [ref=e309]: Dec 2025
+                    - generic [ref=e311]: Jan 2026
+                    - generic [ref=e313]: Mar 2026
+                  - generic [ref=e314]:
+                    - generic [ref=e316]: "0"
+                    - generic [ref=e318]: "1"
+                    - generic [ref=e320]: "2"
+                    - generic [ref=e322]: "3"
+                    - generic [ref=e324]: "4"
+            - generic [ref=e325]:
+              - generic [ref=e327]:
+                - img [ref=e329]
+                - generic [ref=e333]: Order Status Distribution
+              - generic [ref=e336]:
+                - list [ref=e338]:
+                  - listitem [ref=e339]:
+                    - img "NEW legend icon" [ref=e340]
+                    - text: NEW
+                - application [ref=e342]:
+                  - generic [ref=e443]: NEW (1)
+          - generic [ref=e349]:
+            - generic [ref=e350]:
+              - generic [ref=e352]:
+                - img [ref=e354]
+                - generic [ref=e359]: Shipment Status
+              - generic [ref=e361]:
+                - img [ref=e362]
+                - paragraph [ref=e366]: No shipments yet
+            - generic [ref=e368]:
+              - img [ref=e370]
+              - paragraph [ref=e375]: Customers
+              - paragraph [ref=e376]: "9"
+              - link "Manage" [ref=e377] [cursor=pointer]:
+                - /url: /customers
+                - button "Manage" [ref=e378]:
+                  - text: Manage
+                  - img
+            - generic [ref=e380]:
+              - img [ref=e382]
+              - paragraph [ref=e386]: Agents
+              - paragraph [ref=e387]: "6"
+              - link "Manage" [ref=e388] [cursor=pointer]:
+                - /url: /agents
+                - button "Manage" [ref=e389]:
+                  - text: Manage
+                  - img
+          - generic [ref=e390]:
+            - generic [ref=e391]:
+              - generic [ref=e392]:
+                - generic [ref=e393]:
+                  - img [ref=e395]
+                  - generic [ref=e399]: Recent Orders
+                - link "View All" [ref=e400] [cursor=pointer]:
+                  - /url: /orders
+                  - generic [ref=e401]:
+                    - text: View All
+                    - img [ref=e402]
+              - generic [ref=e406]:
+                - generic [ref=e407]:
+                  - img [ref=e409]
+                  - generic [ref=e413]:
+                    - link "ORD-20260313-0001" [ref=e414] [cursor=pointer]:
+                      - /url: /orders/1
+                    - paragraph [ref=e415]: Ahmed Hassan
+                - generic [ref=e416]: New
+            - generic [ref=e417]:
+              - generic [ref=e418]:
+                - generic [ref=e419]:
+                  - img [ref=e421]
+                  - generic [ref=e425]: Recent Shipments
+                - link "View All" [ref=e426] [cursor=pointer]:
+                  - /url: /shipments
+                  - generic [ref=e427]:
+                    - text: View All
+                    - img [ref=e428]
+              - generic [ref=e431]:
+                - img [ref=e432]
+                - paragraph [ref=e436]: No recent shipments
+    - region "Notifications alt+T"
+  - generic [ref=e437]: "0"

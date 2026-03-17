@@ -1,0 +1,1224 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e10]:
+        - text: Performance
+        - generic [ref=e11]: Freight
+    - navigation [ref=e12]:
+      - generic [ref=e241]:
+        - paragraph [ref=e242]: Main
+        - link "Dashboard" [ref=e244] [cursor=pointer]:
+          - /url: /
+          - img [ref=e245]
+          - generic [ref=e250]: Dashboard
+      - generic [ref=e251]:
+        - paragraph [ref=e252]: Operations
+        - generic [ref=e253]:
+          - link "Orders" [ref=e254] [cursor=pointer]:
+            - /url: /orders
+            - img [ref=e255]
+            - generic [ref=e259]: Orders
+          - link "Shipments" [ref=e260] [cursor=pointer]:
+            - /url: /shipments
+            - img [ref=e261]
+            - generic [ref=e265]: Shipments
+          - link "Purchases" [ref=e266] [cursor=pointer]:
+            - /url: /purchases
+            - img [ref=e267]
+            - generic [ref=e271]: Purchases
+      - generic [ref=e272]:
+        - paragraph [ref=e273]: Finance
+        - generic [ref=e274]:
+          - link "Invoices" [ref=e275] [cursor=pointer]:
+            - /url: /invoices
+            - img [ref=e276]
+            - generic [ref=e279]: Invoices
+          - link "Payments" [ref=e280] [cursor=pointer]:
+            - /url: /payments
+            - img [ref=e281]
+            - generic [ref=e283]: Payments
+          - link "Treasury" [ref=e284] [cursor=pointer]:
+            - /url: /finance/treasury
+            - img [ref=e285]
+            - generic [ref=e288]: Treasury
+          - link "Exchange Rates" [ref=e289] [cursor=pointer]:
+            - /url: /finance/exchange-rates
+            - img [ref=e290]
+            - generic [ref=e292]: Exchange Rates
+      - generic [ref=e293]:
+        - paragraph [ref=e294]: People
+        - generic [ref=e295]:
+          - link "Customers" [ref=e296] [cursor=pointer]:
+            - /url: /customers
+            - img [ref=e297]
+            - generic [ref=e302]: Customers
+          - link "Agents" [ref=e303] [cursor=pointer]:
+            - /url: /agents
+            - img [ref=e304]
+            - generic [ref=e308]: Agents
+      - generic [ref=e309]:
+        - paragraph [ref=e310]: Settings
+        - generic [ref=e311]:
+          - link "Shipping Rates" [ref=e312] [cursor=pointer]:
+            - /url: /shipping-rates
+            - img [ref=e313]
+            - generic [ref=e316]: Shipping Rates
+          - link "Countries" [ref=e317] [cursor=pointer]:
+            - /url: /settings/countries
+            - img [ref=e318]
+            - generic [ref=e321]: Countries
+          - link "Users" [ref=e322] [cursor=pointer]:
+            - /url: /settings/users
+            - img [ref=e323]
+            - generic [ref=e325]: Users
+          - link "Settings" [ref=e326] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e327]
+            - generic [ref=e330]: Settings
+          - link "Audit Log" [ref=e331] [cursor=pointer]:
+            - /url: /settings/audit-log
+            - img [ref=e332]
+            - generic [ref=e337]: Audit Log
+          - link "Reports" [ref=e338] [cursor=pointer]:
+            - /url: /reports
+            - img [ref=e339]
+            - generic [ref=e341]: Reports
+    - generic [ref=e115]:
+      - generic [ref=e116]: A
+      - generic [ref=e117]:
+        - paragraph [ref=e118]: Admin
+        - paragraph [ref=e119]: admin@shipping.test
+  - generic [ref=e120]:
+    - banner [ref=e121]:
+      - generic [ref=e122] [cursor=pointer]:
+        - img [ref=e123]
+        - generic [ref=e126]: Search orders, shipments...
+        - generic [ref=e127]: /
+      - generic [ref=e128]:
+        - button "EN" [ref=e342]:
+          - img [ref=e130]
+          - generic [ref=e133]: EN
+        - button "Switch to light" [ref=e343]:
+          - img [ref=e135]
+        - button "Notifications" [ref=e344]:
+          - img [ref=e138]
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - paragraph [ref=e144]: Admin
+            - paragraph [ref=e145]: admin
+          - generic [ref=e146]: A
+          - button "Logout" [ref=e345]:
+            - img [ref=e148]
+    - main [ref=e151]:
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - link [ref=e154] [cursor=pointer]:
+            - /url: /orders
+            - button [ref=e155]:
+              - img
+          - heading "Create Order" [level=1] [ref=e346]
+        - generic [ref=e157]:
+          - generic [ref=e159]: Order Details
+          - generic [ref=e161]:
+            - generic [ref=e162]:
+              - generic [ref=e163]:
+                - generic [ref=e164]: Customer *
+                - combobox [ref=e165]:
+                  - generic: Ahmed Hassan
+                  - img
+                - combobox [ref=e166]
+              - generic [ref=e167]:
+                - generic [ref=e168]: Agent (Optional)
+                - combobox [ref=e169]:
+                  - generic: Select Agent
+                  - img
+                - combobox [ref=e170]
+              - generic [ref=e171]:
+                - generic [ref=e172]: Service Type *
+                - combobox [ref=e173]:
+                  - generic: Shipping
+                  - img
+                - combobox [ref=e174]
+            - generic [ref=e175]:
+              - generic [ref=e176]:
+                - generic [ref=e177]: Origin Country *
+                - button "Origin Country * Destination Country *" [ref=e347]:
+                  - generic [ref=e180]:
+                    - img "Egypt" [ref=e392]
+                    - text: Egypt
+                  - img [ref=e181]
+              - generic [ref=e183]:
+                - generic [ref=e184]: Destination Country *
+                - generic [ref=e185]:
+                  - button "Select Destination" [expanded] [ref=e348]:
+                    - generic [ref=e187]: Select Destination
+                    - img [ref=e188]
+                  - generic [ref=e393]:
+                    - textbox "Search orders, shipments..." [active] [ref=e395]
+                    - generic [ref=e396]:
+                      - option "Ascension Island Ascension Island" [ref=e397]:
+                        - generic [ref=e398]:
+                          - img "Ascension Island" [ref=e399]
+                          - text: Ascension Island
+                      - option "Andorra Andorra" [ref=e400]:
+                        - generic [ref=e401]:
+                          - img "Andorra" [ref=e402]
+                          - text: Andorra
+                      - option "United Arab Emirates United Arab Emirates" [ref=e403]:
+                        - generic [ref=e404]:
+                          - img "United Arab Emirates" [ref=e405]
+                          - text: United Arab Emirates
+                      - option "Afghanistan Afghanistan" [ref=e406]:
+                        - generic [ref=e407]:
+                          - img "Afghanistan" [ref=e408]
+                          - text: Afghanistan
+                      - option "Antigua and Barbuda Antigua and Barbuda" [ref=e409]:
+                        - generic [ref=e410]:
+                          - img "Antigua and Barbuda" [ref=e411]
+                          - text: Antigua and Barbuda
+                      - option "Anguilla Anguilla" [ref=e412]:
+                        - generic [ref=e413]:
+                          - img "Anguilla" [ref=e414]
+                          - text: Anguilla
+                      - option "Albania Albania" [ref=e415]:
+                        - generic [ref=e416]:
+                          - img "Albania" [ref=e417]
+                          - text: Albania
+                      - option "Armenia Armenia" [ref=e418]:
+                        - generic [ref=e419]:
+                          - img "Armenia" [ref=e420]
+                          - text: Armenia
+                      - option "Angola Angola" [ref=e421]:
+                        - generic [ref=e422]:
+                          - img "Angola" [ref=e423]
+                          - text: Angola
+                      - option "Antarctica Antarctica" [ref=e424]:
+                        - generic [ref=e425]:
+                          - img "Antarctica" [ref=e426]
+                          - text: Antarctica
+                      - option "Argentina Argentina" [ref=e427]:
+                        - generic [ref=e428]:
+                          - img "Argentina" [ref=e429]
+                          - text: Argentina
+                      - option "American Samoa American Samoa" [ref=e430]:
+                        - generic [ref=e431]:
+                          - img "American Samoa" [ref=e432]
+                          - text: American Samoa
+                      - option "Austria Austria" [ref=e433]:
+                        - generic [ref=e434]:
+                          - img "Austria" [ref=e435]
+                          - text: Austria
+                      - option "Australia Australia" [ref=e436]:
+                        - generic [ref=e437]:
+                          - img "Australia" [ref=e438]
+                          - text: Australia
+                      - option "Aruba Aruba" [ref=e439]:
+                        - generic [ref=e440]:
+                          - img "Aruba" [ref=e441]
+                          - text: Aruba
+                      - option "Aland Aland" [ref=e442]:
+                        - generic [ref=e443]:
+                          - img "Aland" [ref=e444]
+                          - text: Aland
+                      - option "Azerbaijan Azerbaijan" [ref=e445]:
+                        - generic [ref=e446]:
+                          - img "Azerbaijan" [ref=e447]
+                          - text: Azerbaijan
+                      - option "Bosnia and Herzegovina Bosnia and Herzegovina" [ref=e448]:
+                        - generic [ref=e449]:
+                          - img "Bosnia and Herzegovina" [ref=e450]
+                          - text: Bosnia and Herzegovina
+                      - option "Barbados Barbados" [ref=e451]:
+                        - generic [ref=e452]:
+                          - img "Barbados" [ref=e453]
+                          - text: Barbados
+                      - option "Bangladesh Bangladesh" [ref=e454]:
+                        - generic [ref=e455]:
+                          - img "Bangladesh" [ref=e456]
+                          - text: Bangladesh
+                      - option "Belgium Belgium" [ref=e457]:
+                        - generic [ref=e458]:
+                          - img "Belgium" [ref=e459]
+                          - text: Belgium
+                      - option "Burkina Faso Burkina Faso" [ref=e460]:
+                        - generic [ref=e461]:
+                          - img "Burkina Faso" [ref=e462]
+                          - text: Burkina Faso
+                      - option "Bulgaria Bulgaria" [ref=e463]:
+                        - generic [ref=e464]:
+                          - img "Bulgaria" [ref=e465]
+                          - text: Bulgaria
+                      - option "Bahrain Bahrain" [ref=e466]:
+                        - generic [ref=e467]:
+                          - img "Bahrain" [ref=e468]
+                          - text: Bahrain
+                      - option "Burundi Burundi" [ref=e469]:
+                        - generic [ref=e470]:
+                          - img "Burundi" [ref=e471]
+                          - text: Burundi
+                      - option "Benin Benin" [ref=e472]:
+                        - generic [ref=e473]:
+                          - img "Benin" [ref=e474]
+                          - text: Benin
+                      - option "Saint Barthelemy Saint Barthelemy" [ref=e475]:
+                        - generic [ref=e476]:
+                          - img "Saint Barthelemy" [ref=e477]
+                          - text: Saint Barthelemy
+                      - option "Bermuda Bermuda" [ref=e478]:
+                        - generic [ref=e479]:
+                          - img "Bermuda" [ref=e480]
+                          - text: Bermuda
+                      - option "Brunei Brunei" [ref=e481]:
+                        - generic [ref=e482]:
+                          - img "Brunei" [ref=e483]
+                          - text: Brunei
+                      - option "Bolivia Bolivia" [ref=e484]:
+                        - generic [ref=e485]:
+                          - img "Bolivia" [ref=e486]
+                          - text: Bolivia
+                      - option "Bonaire Bonaire" [ref=e487]:
+                        - generic [ref=e488]:
+                          - img "Bonaire" [ref=e489]
+                          - text: Bonaire
+                      - option "Brazil Brazil" [ref=e490]:
+                        - generic [ref=e491]:
+                          - img "Brazil" [ref=e492]
+                          - text: Brazil
+                      - option "Bahamas Bahamas" [ref=e493]:
+                        - generic [ref=e494]:
+                          - img "Bahamas" [ref=e495]
+                          - text: Bahamas
+                      - option "Bhutan Bhutan" [ref=e496]:
+                        - generic [ref=e497]:
+                          - img "Bhutan" [ref=e498]
+                          - text: Bhutan
+                      - option "Bouvet Island Bouvet Island" [ref=e499]:
+                        - generic [ref=e500]:
+                          - img "Bouvet Island" [ref=e501]
+                          - text: Bouvet Island
+                      - option "Botswana Botswana" [ref=e502]:
+                        - generic [ref=e503]:
+                          - img "Botswana" [ref=e504]
+                          - text: Botswana
+                      - option "Belarus Belarus" [ref=e505]:
+                        - generic [ref=e506]:
+                          - img "Belarus" [ref=e507]
+                          - text: Belarus
+                      - option "Belize Belize" [ref=e508]:
+                        - generic [ref=e509]:
+                          - img "Belize" [ref=e510]
+                          - text: Belize
+                      - option "Canada Canada" [ref=e511]:
+                        - generic [ref=e512]:
+                          - img "Canada" [ref=e513]
+                          - text: Canada
+                      - option "Cocos (Keeling) Islands Cocos (Keeling) Islands" [ref=e514]:
+                        - generic [ref=e515]:
+                          - img "Cocos (Keeling) Islands" [ref=e516]
+                          - text: Cocos (Keeling) Islands
+                      - option "Democratic Republic of the Congo Democratic Republic of the Congo" [ref=e517]:
+                        - generic [ref=e518]:
+                          - img "Democratic Republic of the Congo" [ref=e519]
+                          - text: Democratic Republic of the Congo
+                      - option "Central African Republic Central African Republic" [ref=e520]:
+                        - generic [ref=e521]:
+                          - img "Central African Republic" [ref=e522]
+                          - text: Central African Republic
+                      - option "Republic of the Congo Republic of the Congo" [ref=e523]:
+                        - generic [ref=e524]:
+                          - img "Republic of the Congo" [ref=e525]
+                          - text: Republic of the Congo
+                      - option "Switzerland Switzerland" [ref=e526]:
+                        - generic [ref=e527]:
+                          - img "Switzerland" [ref=e528]
+                          - text: Switzerland
+                      - option "Ivory Coast Ivory Coast" [ref=e529]:
+                        - generic [ref=e530]:
+                          - img "Ivory Coast" [ref=e531]
+                          - text: Ivory Coast
+                      - option "Cook Islands Cook Islands" [ref=e532]:
+                        - generic [ref=e533]:
+                          - img "Cook Islands" [ref=e534]
+                          - text: Cook Islands
+                      - option "Chile Chile" [ref=e535]:
+                        - generic [ref=e536]:
+                          - img "Chile" [ref=e537]
+                          - text: Chile
+                      - option "Cameroon Cameroon" [ref=e538]:
+                        - generic [ref=e539]:
+                          - img "Cameroon" [ref=e540]
+                          - text: Cameroon
+                      - option "China China" [ref=e541]:
+                        - generic [ref=e542]:
+                          - img "China" [ref=e543]
+                          - text: China
+                      - option "Colombia Colombia" [ref=e544]:
+                        - generic [ref=e545]:
+                          - img "Colombia" [ref=e546]
+                          - text: Colombia
+                      - option "Costa Rica Costa Rica" [ref=e547]:
+                        - generic [ref=e548]:
+                          - img "Costa Rica" [ref=e549]
+                          - text: Costa Rica
+                      - option "Cuba Cuba" [ref=e550]:
+                        - generic [ref=e551]:
+                          - img "Cuba" [ref=e552]
+                          - text: Cuba
+                      - option "Cape Verde Cape Verde" [ref=e553]:
+                        - generic [ref=e554]:
+                          - img "Cape Verde" [ref=e555]
+                          - text: Cape Verde
+                      - option "Curacao Curacao" [ref=e556]:
+                        - generic [ref=e557]:
+                          - img "Curacao" [ref=e558]
+                          - text: Curacao
+                      - option "Christmas Island Christmas Island" [ref=e559]:
+                        - generic [ref=e560]:
+                          - img "Christmas Island" [ref=e561]
+                          - text: Christmas Island
+                      - option "Cyprus Cyprus" [ref=e562]:
+                        - generic [ref=e563]:
+                          - img "Cyprus" [ref=e564]
+                          - text: Cyprus
+                      - option "Czech Republic Czech Republic" [ref=e565]:
+                        - generic [ref=e566]:
+                          - img "Czech Republic" [ref=e567]
+                          - text: Czech Republic
+                      - option "Germany Germany" [ref=e568]:
+                        - generic [ref=e569]:
+                          - img "Germany" [ref=e570]
+                          - text: Germany
+                      - option "Djibouti Djibouti" [ref=e571]:
+                        - generic [ref=e572]:
+                          - img "Djibouti" [ref=e573]
+                          - text: Djibouti
+                      - option "Denmark Denmark" [ref=e574]:
+                        - generic [ref=e575]:
+                          - img "Denmark" [ref=e576]
+                          - text: Denmark
+                      - option "Dominica Dominica" [ref=e577]:
+                        - generic [ref=e578]:
+                          - img "Dominica" [ref=e579]
+                          - text: Dominica
+                      - option "Dominican Republic Dominican Republic" [ref=e580]:
+                        - generic [ref=e581]:
+                          - img "Dominican Republic" [ref=e582]
+                          - text: Dominican Republic
+                      - option "Algeria Algeria" [ref=e583]:
+                        - generic [ref=e584]:
+                          - img "Algeria" [ref=e585]
+                          - text: Algeria
+                      - option "Ecuador Ecuador" [ref=e586]:
+                        - generic [ref=e587]:
+                          - img "Ecuador" [ref=e588]
+                          - text: Ecuador
+                      - option "Estonia Estonia" [ref=e589]:
+                        - generic [ref=e590]:
+                          - img "Estonia" [ref=e591]
+                          - text: Estonia
+                      - option "Egypt Egypt" [ref=e592]:
+                        - generic [ref=e593]:
+                          - img "Egypt" [ref=e594]
+                          - text: Egypt
+                      - option "Western Sahara Western Sahara" [ref=e595]:
+                        - generic [ref=e596]:
+                          - img "Western Sahara" [ref=e597]
+                          - text: Western Sahara
+                      - option "Eritrea Eritrea" [ref=e598]:
+                        - generic [ref=e599]:
+                          - img "Eritrea" [ref=e600]
+                          - text: Eritrea
+                      - option "Spain Spain" [ref=e601]:
+                        - generic [ref=e602]:
+                          - img "Spain" [ref=e603]
+                          - text: Spain
+                      - option "Ethiopia Ethiopia" [ref=e604]:
+                        - generic [ref=e605]:
+                          - img "Ethiopia" [ref=e606]
+                          - text: Ethiopia
+                      - option "Finland Finland" [ref=e607]:
+                        - generic [ref=e608]:
+                          - img "Finland" [ref=e609]
+                          - text: Finland
+                      - option "Fiji Fiji" [ref=e610]:
+                        - generic [ref=e611]:
+                          - img "Fiji" [ref=e612]
+                          - text: Fiji
+                      - option "Falkland Islands Falkland Islands" [ref=e613]:
+                        - generic [ref=e614]:
+                          - img "Falkland Islands" [ref=e615]
+                          - text: Falkland Islands
+                      - option "Micronesia Micronesia" [ref=e616]:
+                        - generic [ref=e617]:
+                          - img "Micronesia" [ref=e618]
+                          - text: Micronesia
+                      - option "Faroe Islands Faroe Islands" [ref=e619]:
+                        - generic [ref=e620]:
+                          - img "Faroe Islands" [ref=e621]
+                          - text: Faroe Islands
+                      - option "France France" [ref=e622]:
+                        - generic [ref=e623]:
+                          - img "France" [ref=e624]
+                          - text: France
+                      - option "Gabon Gabon" [ref=e625]:
+                        - generic [ref=e626]:
+                          - img "Gabon" [ref=e627]
+                          - text: Gabon
+                      - option "United Kingdom United Kingdom" [ref=e628]:
+                        - generic [ref=e629]:
+                          - img "United Kingdom" [ref=e630]
+                          - text: United Kingdom
+                      - option "Grenada Grenada" [ref=e631]:
+                        - generic [ref=e632]:
+                          - img "Grenada" [ref=e633]
+                          - text: Grenada
+                      - option "Georgia Georgia" [ref=e634]:
+                        - generic [ref=e635]:
+                          - img "Georgia" [ref=e636]
+                          - text: Georgia
+                      - option "French Guiana French Guiana" [ref=e637]:
+                        - generic [ref=e638]:
+                          - img "French Guiana" [ref=e639]
+                          - text: French Guiana
+                      - option "Guernsey Guernsey" [ref=e640]:
+                        - generic [ref=e641]:
+                          - img "Guernsey" [ref=e642]
+                          - text: Guernsey
+                      - option "Ghana Ghana" [ref=e643]:
+                        - generic [ref=e644]:
+                          - img "Ghana" [ref=e645]
+                          - text: Ghana
+                      - option "Gibraltar Gibraltar" [ref=e646]:
+                        - generic [ref=e647]:
+                          - img "Gibraltar" [ref=e648]
+                          - text: Gibraltar
+                      - option "Greenland Greenland" [ref=e649]:
+                        - generic [ref=e650]:
+                          - img "Greenland" [ref=e651]
+                          - text: Greenland
+                      - option "Gambia Gambia" [ref=e652]:
+                        - generic [ref=e653]:
+                          - img "Gambia" [ref=e654]
+                          - text: Gambia
+                      - option "Guinea Guinea" [ref=e655]:
+                        - generic [ref=e656]:
+                          - img "Guinea" [ref=e657]
+                          - text: Guinea
+                      - option "Guadeloupe Guadeloupe" [ref=e658]:
+                        - generic [ref=e659]:
+                          - img "Guadeloupe" [ref=e660]
+                          - text: Guadeloupe
+                      - option "Equatorial Guinea Equatorial Guinea" [ref=e661]:
+                        - generic [ref=e662]:
+                          - img "Equatorial Guinea" [ref=e663]
+                          - text: Equatorial Guinea
+                      - option "Greece Greece" [ref=e664]:
+                        - generic [ref=e665]:
+                          - img "Greece" [ref=e666]
+                          - text: Greece
+                      - option "South Georgia and the South Sandwich Islands South Georgia and the South Sandwich Islands" [ref=e667]:
+                        - generic [ref=e668]:
+                          - img "South Georgia and the South Sandwich Islands" [ref=e669]
+                          - text: South Georgia and the South Sandwich Islands
+                      - option "Guatemala Guatemala" [ref=e670]:
+                        - generic [ref=e671]:
+                          - img "Guatemala" [ref=e672]
+                          - text: Guatemala
+                      - option "Guam Guam" [ref=e673]:
+                        - generic [ref=e674]:
+                          - img "Guam" [ref=e675]
+                          - text: Guam
+                      - option "Guinea-Bissau Guinea-Bissau" [ref=e676]:
+                        - generic [ref=e677]:
+                          - img "Guinea-Bissau" [ref=e678]
+                          - text: Guinea-Bissau
+                      - option "Guyana Guyana" [ref=e679]:
+                        - generic [ref=e680]:
+                          - img "Guyana" [ref=e681]
+                          - text: Guyana
+                      - option "Hong Kong Hong Kong" [ref=e682]:
+                        - generic [ref=e683]:
+                          - img "Hong Kong" [ref=e684]
+                          - text: Hong Kong
+                      - option "Heard Island and McDonald Islands Heard Island and McDonald Islands" [ref=e685]:
+                        - generic [ref=e686]:
+                          - img "Heard Island and McDonald Islands" [ref=e687]
+                          - text: Heard Island and McDonald Islands
+                      - option "Honduras Honduras" [ref=e688]:
+                        - generic [ref=e689]:
+                          - img "Honduras" [ref=e690]
+                          - text: Honduras
+                      - option "Croatia Croatia" [ref=e691]:
+                        - generic [ref=e692]:
+                          - img "Croatia" [ref=e693]
+                          - text: Croatia
+                      - option "Haiti Haiti" [ref=e694]:
+                        - generic [ref=e695]:
+                          - img "Haiti" [ref=e696]
+                          - text: Haiti
+                      - option "Hungary Hungary" [ref=e697]:
+                        - generic [ref=e698]:
+                          - img "Hungary" [ref=e699]
+                          - text: Hungary
+                      - option "Indonesia Indonesia" [ref=e700]:
+                        - generic [ref=e701]:
+                          - img "Indonesia" [ref=e702]
+                          - text: Indonesia
+                      - option "Ireland Ireland" [ref=e703]:
+                        - generic [ref=e704]:
+                          - img "Ireland" [ref=e705]
+                          - text: Ireland
+                      - option "Israel Israel" [ref=e706]:
+                        - generic [ref=e707]:
+                          - img "Israel" [ref=e708]
+                          - text: Israel
+                      - option "Isle of Man Isle of Man" [ref=e709]:
+                        - generic [ref=e710]:
+                          - img "Isle of Man" [ref=e711]
+                          - text: Isle of Man
+                      - option "India India" [ref=e712]:
+                        - generic [ref=e713]:
+                          - img "India" [ref=e714]
+                          - text: India
+                      - option "British Indian Ocean Territory British Indian Ocean Territory" [ref=e715]:
+                        - generic [ref=e716]:
+                          - img "British Indian Ocean Territory" [ref=e717]
+                          - text: British Indian Ocean Territory
+                      - option "Iraq Iraq" [ref=e718]:
+                        - generic [ref=e719]:
+                          - img "Iraq" [ref=e720]
+                          - text: Iraq
+                      - option "Iran Iran" [ref=e721]:
+                        - generic [ref=e722]:
+                          - img "Iran" [ref=e723]
+                          - text: Iran
+                      - option "Iceland Iceland" [ref=e724]:
+                        - generic [ref=e725]:
+                          - img "Iceland" [ref=e726]
+                          - text: Iceland
+                      - option "Italy Italy" [ref=e727]:
+                        - generic [ref=e728]:
+                          - img "Italy" [ref=e729]
+                          - text: Italy
+                      - option "Jersey Jersey" [ref=e730]:
+                        - generic [ref=e731]:
+                          - img "Jersey" [ref=e732]
+                          - text: Jersey
+                      - option "Jamaica Jamaica" [ref=e733]:
+                        - generic [ref=e734]:
+                          - img "Jamaica" [ref=e735]
+                          - text: Jamaica
+                      - option "Jordan Jordan" [ref=e736]:
+                        - generic [ref=e737]:
+                          - img "Jordan" [ref=e738]
+                          - text: Jordan
+                      - option "Japan Japan" [ref=e739]:
+                        - generic [ref=e740]:
+                          - img "Japan" [ref=e741]
+                          - text: Japan
+                      - option "Kenya Kenya" [ref=e742]:
+                        - generic [ref=e743]:
+                          - img "Kenya" [ref=e744]
+                          - text: Kenya
+                      - option "Kyrgyzstan Kyrgyzstan" [ref=e745]:
+                        - generic [ref=e746]:
+                          - img "Kyrgyzstan" [ref=e747]
+                          - text: Kyrgyzstan
+                      - option "Cambodia Cambodia" [ref=e748]:
+                        - generic [ref=e749]:
+                          - img "Cambodia" [ref=e750]
+                          - text: Cambodia
+                      - option "Kiribati Kiribati" [ref=e751]:
+                        - generic [ref=e752]:
+                          - img "Kiribati" [ref=e753]
+                          - text: Kiribati
+                      - option "Comoros Comoros" [ref=e754]:
+                        - generic [ref=e755]:
+                          - img "Comoros" [ref=e756]
+                          - text: Comoros
+                      - option "Saint Kitts and Nevis Saint Kitts and Nevis" [ref=e757]:
+                        - generic [ref=e758]:
+                          - img "Saint Kitts and Nevis" [ref=e759]
+                          - text: Saint Kitts and Nevis
+                      - option "North Korea North Korea" [ref=e760]:
+                        - generic [ref=e761]:
+                          - img "North Korea" [ref=e762]
+                          - text: North Korea
+                      - option "South Korea South Korea" [ref=e763]:
+                        - generic [ref=e764]:
+                          - img "South Korea" [ref=e765]
+                          - text: South Korea
+                      - option "Kuwait Kuwait" [ref=e766]:
+                        - generic [ref=e767]:
+                          - img "Kuwait" [ref=e768]
+                          - text: Kuwait
+                      - option "Cayman Islands Cayman Islands" [ref=e769]:
+                        - generic [ref=e770]:
+                          - img "Cayman Islands" [ref=e771]
+                          - text: Cayman Islands
+                      - option "Kazakhstan Kazakhstan" [ref=e772]:
+                        - generic [ref=e773]:
+                          - img "Kazakhstan" [ref=e774]
+                          - text: Kazakhstan
+                      - option "Laos Laos" [ref=e775]:
+                        - generic [ref=e776]:
+                          - img "Laos" [ref=e777]
+                          - text: Laos
+                      - option "Lebanon Lebanon" [ref=e778]:
+                        - generic [ref=e779]:
+                          - img "Lebanon" [ref=e780]
+                          - text: Lebanon
+                      - option "Saint Lucia Saint Lucia" [ref=e781]:
+                        - generic [ref=e782]:
+                          - img "Saint Lucia" [ref=e783]
+                          - text: Saint Lucia
+                      - option "Liechtenstein Liechtenstein" [ref=e784]:
+                        - generic [ref=e785]:
+                          - img "Liechtenstein" [ref=e786]
+                          - text: Liechtenstein
+                      - option "Sri Lanka Sri Lanka" [ref=e787]:
+                        - generic [ref=e788]:
+                          - img "Sri Lanka" [ref=e789]
+                          - text: Sri Lanka
+                      - option "Liberia Liberia" [ref=e790]:
+                        - generic [ref=e791]:
+                          - img "Liberia" [ref=e792]
+                          - text: Liberia
+                      - option "Lesotho Lesotho" [ref=e793]:
+                        - generic [ref=e794]:
+                          - img "Lesotho" [ref=e795]
+                          - text: Lesotho
+                      - option "Lithuania Lithuania" [ref=e796]:
+                        - generic [ref=e797]:
+                          - img "Lithuania" [ref=e798]
+                          - text: Lithuania
+                      - option "Luxembourg Luxembourg" [ref=e799]:
+                        - generic [ref=e800]:
+                          - img "Luxembourg" [ref=e801]
+                          - text: Luxembourg
+                      - option "Latvia Latvia" [ref=e802]:
+                        - generic [ref=e803]:
+                          - img "Latvia" [ref=e804]
+                          - text: Latvia
+                      - option "Libya Libya" [ref=e805]:
+                        - generic [ref=e806]:
+                          - img "Libya" [ref=e807]
+                          - text: Libya
+                      - option "Morocco Morocco" [ref=e808]:
+                        - generic [ref=e809]:
+                          - img "Morocco" [ref=e810]
+                          - text: Morocco
+                      - option "Monaco Monaco" [ref=e811]:
+                        - generic [ref=e812]:
+                          - img "Monaco" [ref=e813]
+                          - text: Monaco
+                      - option "Moldova Moldova" [ref=e814]:
+                        - generic [ref=e815]:
+                          - img "Moldova" [ref=e816]
+                          - text: Moldova
+                      - option "Montenegro Montenegro" [ref=e817]:
+                        - generic [ref=e818]:
+                          - img "Montenegro" [ref=e819]
+                          - text: Montenegro
+                      - option "Saint Martin Saint Martin" [ref=e820]:
+                        - generic [ref=e821]:
+                          - img "Saint Martin" [ref=e822]
+                          - text: Saint Martin
+                      - option "Madagascar Madagascar" [ref=e823]:
+                        - generic [ref=e824]:
+                          - img "Madagascar" [ref=e825]
+                          - text: Madagascar
+                      - option "Marshall Islands Marshall Islands" [ref=e826]:
+                        - generic [ref=e827]:
+                          - img "Marshall Islands" [ref=e828]
+                          - text: Marshall Islands
+                      - option "North Macedonia North Macedonia" [ref=e829]:
+                        - generic [ref=e830]:
+                          - img "North Macedonia" [ref=e831]
+                          - text: North Macedonia
+                      - option "Mali Mali" [ref=e832]:
+                        - generic [ref=e833]:
+                          - img "Mali" [ref=e834]
+                          - text: Mali
+                      - option "Myanmar (Burma) Myanmar (Burma)" [ref=e835]:
+                        - generic [ref=e836]:
+                          - img "Myanmar (Burma)" [ref=e837]
+                          - text: Myanmar (Burma)
+                      - option "Mongolia Mongolia" [ref=e838]:
+                        - generic [ref=e839]:
+                          - img "Mongolia" [ref=e840]
+                          - text: Mongolia
+                      - option "Macao Macao" [ref=e841]:
+                        - generic [ref=e842]:
+                          - img "Macao" [ref=e843]
+                          - text: Macao
+                      - option "Northern Mariana Islands Northern Mariana Islands" [ref=e844]:
+                        - generic [ref=e845]:
+                          - img "Northern Mariana Islands" [ref=e846]
+                          - text: Northern Mariana Islands
+                      - option "Martinique Martinique" [ref=e847]:
+                        - generic [ref=e848]:
+                          - img "Martinique" [ref=e849]
+                          - text: Martinique
+                      - option "Mauritania Mauritania" [ref=e850]:
+                        - generic [ref=e851]:
+                          - img "Mauritania" [ref=e852]
+                          - text: Mauritania
+                      - option "Montserrat Montserrat" [ref=e853]:
+                        - generic [ref=e854]:
+                          - img "Montserrat" [ref=e855]
+                          - text: Montserrat
+                      - option "Malta Malta" [ref=e856]:
+                        - generic [ref=e857]:
+                          - img "Malta" [ref=e858]
+                          - text: Malta
+                      - option "Mauritius Mauritius" [ref=e859]:
+                        - generic [ref=e860]:
+                          - img "Mauritius" [ref=e861]
+                          - text: Mauritius
+                      - option "Maldives Maldives" [ref=e862]:
+                        - generic [ref=e863]:
+                          - img "Maldives" [ref=e864]
+                          - text: Maldives
+                      - option "Malawi Malawi" [ref=e865]:
+                        - generic [ref=e866]:
+                          - img "Malawi" [ref=e867]
+                          - text: Malawi
+                      - option "Mexico Mexico" [ref=e868]:
+                        - generic [ref=e869]:
+                          - img "Mexico" [ref=e870]
+                          - text: Mexico
+                      - option "Malaysia Malaysia" [ref=e871]:
+                        - generic [ref=e872]:
+                          - img "Malaysia" [ref=e873]
+                          - text: Malaysia
+                      - option "Mozambique Mozambique" [ref=e874]:
+                        - generic [ref=e875]:
+                          - img "Mozambique" [ref=e876]
+                          - text: Mozambique
+                      - option "Namibia Namibia" [ref=e877]:
+                        - generic [ref=e878]:
+                          - img "Namibia" [ref=e879]
+                          - text: Namibia
+                      - option "New Caledonia New Caledonia" [ref=e880]:
+                        - generic [ref=e881]:
+                          - img "New Caledonia" [ref=e882]
+                          - text: New Caledonia
+                      - option "Niger Niger" [ref=e883]:
+                        - generic [ref=e884]:
+                          - img "Niger" [ref=e885]
+                          - text: Niger
+                      - option "Norfolk Island Norfolk Island" [ref=e886]:
+                        - generic [ref=e887]:
+                          - img "Norfolk Island" [ref=e888]
+                          - text: Norfolk Island
+                      - option "Nigeria Nigeria" [ref=e889]:
+                        - generic [ref=e890]:
+                          - img "Nigeria" [ref=e891]
+                          - text: Nigeria
+                      - option "Nicaragua Nicaragua" [ref=e892]:
+                        - generic [ref=e893]:
+                          - img "Nicaragua" [ref=e894]
+                          - text: Nicaragua
+                      - option "Netherlands Netherlands" [ref=e895]:
+                        - generic [ref=e896]:
+                          - img "Netherlands" [ref=e897]
+                          - text: Netherlands
+                      - option "Norway Norway" [ref=e898]:
+                        - generic [ref=e899]:
+                          - img "Norway" [ref=e900]
+                          - text: Norway
+                      - option "Nepal Nepal" [ref=e901]:
+                        - generic [ref=e902]:
+                          - img "Nepal" [ref=e903]
+                          - text: Nepal
+                      - option "Nauru Nauru" [ref=e904]:
+                        - generic [ref=e905]:
+                          - img "Nauru" [ref=e906]
+                          - text: Nauru
+                      - option "Niue Niue" [ref=e907]:
+                        - generic [ref=e908]:
+                          - img "Niue" [ref=e909]
+                          - text: Niue
+                      - option "New Zealand New Zealand" [ref=e910]:
+                        - generic [ref=e911]:
+                          - img "New Zealand" [ref=e912]
+                          - text: New Zealand
+                      - option "Oman Oman" [ref=e913]:
+                        - generic [ref=e914]:
+                          - img "Oman" [ref=e915]
+                          - text: Oman
+                      - option "Panama Panama" [ref=e916]:
+                        - generic [ref=e917]:
+                          - img "Panama" [ref=e918]
+                          - text: Panama
+                      - option "Peru Peru" [ref=e919]:
+                        - generic [ref=e920]:
+                          - img "Peru" [ref=e921]
+                          - text: Peru
+                      - option "French Polynesia French Polynesia" [ref=e922]:
+                        - generic [ref=e923]:
+                          - img "French Polynesia" [ref=e924]
+                          - text: French Polynesia
+                      - option "Papua New Guinea Papua New Guinea" [ref=e925]:
+                        - generic [ref=e926]:
+                          - img "Papua New Guinea" [ref=e927]
+                          - text: Papua New Guinea
+                      - option "Philippines Philippines" [ref=e928]:
+                        - generic [ref=e929]:
+                          - img "Philippines" [ref=e930]
+                          - text: Philippines
+                      - option "Pakistan Pakistan" [ref=e931]:
+                        - generic [ref=e932]:
+                          - img "Pakistan" [ref=e933]
+                          - text: Pakistan
+                      - option "Poland Poland" [ref=e934]:
+                        - generic [ref=e935]:
+                          - img "Poland" [ref=e936]
+                          - text: Poland
+                      - option "Saint Pierre and Miquelon Saint Pierre and Miquelon" [ref=e937]:
+                        - generic [ref=e938]:
+                          - img "Saint Pierre and Miquelon" [ref=e939]
+                          - text: Saint Pierre and Miquelon
+                      - option "Pitcairn Islands Pitcairn Islands" [ref=e940]:
+                        - generic [ref=e941]:
+                          - img "Pitcairn Islands" [ref=e942]
+                          - text: Pitcairn Islands
+                      - option "Puerto Rico Puerto Rico" [ref=e943]:
+                        - generic [ref=e944]:
+                          - img "Puerto Rico" [ref=e945]
+                          - text: Puerto Rico
+                      - option "Palestine Palestine" [ref=e946]:
+                        - generic [ref=e947]:
+                          - img "Palestine" [ref=e948]
+                          - text: Palestine
+                      - option "Portugal Portugal" [ref=e949]:
+                        - generic [ref=e950]:
+                          - img "Portugal" [ref=e951]
+                          - text: Portugal
+                      - option "Palau Palau" [ref=e952]:
+                        - generic [ref=e953]:
+                          - img "Palau" [ref=e954]
+                          - text: Palau
+                      - option "Paraguay Paraguay" [ref=e955]:
+                        - generic [ref=e956]:
+                          - img "Paraguay" [ref=e957]
+                          - text: Paraguay
+                      - option "Qatar Qatar" [ref=e958]:
+                        - generic [ref=e959]:
+                          - img "Qatar" [ref=e960]
+                          - text: Qatar
+                      - option "Reunion Reunion" [ref=e961]:
+                        - generic [ref=e962]:
+                          - img "Reunion" [ref=e963]
+                          - text: Reunion
+                      - option "Romania Romania" [ref=e964]:
+                        - generic [ref=e965]:
+                          - img "Romania" [ref=e966]
+                          - text: Romania
+                      - option "Serbia Serbia" [ref=e967]:
+                        - generic [ref=e968]:
+                          - img "Serbia" [ref=e969]
+                          - text: Serbia
+                      - option "Russia Russia" [ref=e970]:
+                        - generic [ref=e971]:
+                          - img "Russia" [ref=e972]
+                          - text: Russia
+                      - option "Rwanda Rwanda" [ref=e973]:
+                        - generic [ref=e974]:
+                          - img "Rwanda" [ref=e975]
+                          - text: Rwanda
+                      - option "Saudi Arabia Saudi Arabia" [ref=e976]:
+                        - generic [ref=e977]:
+                          - img "Saudi Arabia" [ref=e978]
+                          - text: Saudi Arabia
+                      - option "Solomon Islands Solomon Islands" [ref=e979]:
+                        - generic [ref=e980]:
+                          - img "Solomon Islands" [ref=e981]
+                          - text: Solomon Islands
+                      - option "Seychelles Seychelles" [ref=e982]:
+                        - generic [ref=e983]:
+                          - img "Seychelles" [ref=e984]
+                          - text: Seychelles
+                      - option "Sudan Sudan" [ref=e985]:
+                        - generic [ref=e986]:
+                          - img "Sudan" [ref=e987]
+                          - text: Sudan
+                      - option "Sweden Sweden" [ref=e988]:
+                        - generic [ref=e989]:
+                          - img "Sweden" [ref=e990]
+                          - text: Sweden
+                      - option "Singapore Singapore" [ref=e991]:
+                        - generic [ref=e992]:
+                          - img "Singapore" [ref=e993]
+                          - text: Singapore
+                      - option "Saint Helena Saint Helena" [ref=e994]:
+                        - generic [ref=e995]:
+                          - img "Saint Helena" [ref=e996]
+                          - text: Saint Helena
+                      - option "Slovenia Slovenia" [ref=e997]:
+                        - generic [ref=e998]:
+                          - img "Slovenia" [ref=e999]
+                          - text: Slovenia
+                      - option "Svalbard and Jan Mayen Svalbard and Jan Mayen" [ref=e1000]:
+                        - generic [ref=e1001]:
+                          - img "Svalbard and Jan Mayen" [ref=e1002]
+                          - text: Svalbard and Jan Mayen
+                      - option "Slovakia Slovakia" [ref=e1003]:
+                        - generic [ref=e1004]:
+                          - img "Slovakia" [ref=e1005]
+                          - text: Slovakia
+                      - option "Sierra Leone Sierra Leone" [ref=e1006]:
+                        - generic [ref=e1007]:
+                          - img "Sierra Leone" [ref=e1008]
+                          - text: Sierra Leone
+                      - option "San Marino San Marino" [ref=e1009]:
+                        - generic [ref=e1010]:
+                          - img "San Marino" [ref=e1011]
+                          - text: San Marino
+                      - option "Senegal Senegal" [ref=e1012]:
+                        - generic [ref=e1013]:
+                          - img "Senegal" [ref=e1014]
+                          - text: Senegal
+                      - option "Somalia Somalia" [ref=e1015]:
+                        - generic [ref=e1016]:
+                          - img "Somalia" [ref=e1017]
+                          - text: Somalia
+                      - option "Suriname Suriname" [ref=e1018]:
+                        - generic [ref=e1019]:
+                          - img "Suriname" [ref=e1020]
+                          - text: Suriname
+                      - option "South Sudan South Sudan" [ref=e1021]:
+                        - generic [ref=e1022]:
+                          - img "South Sudan" [ref=e1023]
+                          - text: South Sudan
+                      - option "Sao Tome and Principe Sao Tome and Principe" [ref=e1024]:
+                        - generic [ref=e1025]:
+                          - img "Sao Tome and Principe" [ref=e1026]
+                          - text: Sao Tome and Principe
+                      - option "El Salvador El Salvador" [ref=e1027]:
+                        - generic [ref=e1028]:
+                          - img "El Salvador" [ref=e1029]
+                          - text: El Salvador
+                      - option "Sint Maarten Sint Maarten" [ref=e1030]:
+                        - generic [ref=e1031]:
+                          - img "Sint Maarten" [ref=e1032]
+                          - text: Sint Maarten
+                      - option "Syria Syria" [ref=e1033]:
+                        - generic [ref=e1034]:
+                          - img "Syria" [ref=e1035]
+                          - text: Syria
+                      - option "Eswatini Eswatini" [ref=e1036]:
+                        - generic [ref=e1037]:
+                          - img "Eswatini" [ref=e1038]
+                          - text: Eswatini
+                      - option "Tristan da Cunha Tristan da Cunha" [ref=e1039]:
+                        - generic [ref=e1040]:
+                          - img "Tristan da Cunha" [ref=e1041]
+                          - text: Tristan da Cunha
+                      - option "Turks and Caicos Islands Turks and Caicos Islands" [ref=e1042]:
+                        - generic [ref=e1043]:
+                          - img "Turks and Caicos Islands" [ref=e1044]
+                          - text: Turks and Caicos Islands
+                      - option "Chad Chad" [ref=e1045]:
+                        - generic [ref=e1046]:
+                          - img "Chad" [ref=e1047]
+                          - text: Chad
+                      - option "French Southern Territories French Southern Territories" [ref=e1048]:
+                        - generic [ref=e1049]:
+                          - img "French Southern Territories" [ref=e1050]
+                          - text: French Southern Territories
+                      - option "Togo Togo" [ref=e1051]:
+                        - generic [ref=e1052]:
+                          - img "Togo" [ref=e1053]
+                          - text: Togo
+                      - option "Thailand Thailand" [ref=e1054]:
+                        - generic [ref=e1055]:
+                          - img "Thailand" [ref=e1056]
+                          - text: Thailand
+                      - option "Tajikistan Tajikistan" [ref=e1057]:
+                        - generic [ref=e1058]:
+                          - img "Tajikistan" [ref=e1059]
+                          - text: Tajikistan
+                      - option "Tokelau Tokelau" [ref=e1060]:
+                        - generic [ref=e1061]:
+                          - img "Tokelau" [ref=e1062]
+                          - text: Tokelau
+                      - option "East Timor East Timor" [ref=e1063]:
+                        - generic [ref=e1064]:
+                          - img "East Timor" [ref=e1065]
+                          - text: East Timor
+                      - option "Turkmenistan Turkmenistan" [ref=e1066]:
+                        - generic [ref=e1067]:
+                          - img "Turkmenistan" [ref=e1068]
+                          - text: Turkmenistan
+                      - option "Tunisia Tunisia" [ref=e1069]:
+                        - generic [ref=e1070]:
+                          - img "Tunisia" [ref=e1071]
+                          - text: Tunisia
+                      - option "Tonga Tonga" [ref=e1072]:
+                        - generic [ref=e1073]:
+                          - img "Tonga" [ref=e1074]
+                          - text: Tonga
+                      - option "Türkiye Türkiye" [ref=e1075]:
+                        - generic [ref=e1076]:
+                          - img "Türkiye" [ref=e1077]
+                          - text: Türkiye
+                      - option "Trinidad and Tobago Trinidad and Tobago" [ref=e1078]:
+                        - generic [ref=e1079]:
+                          - img "Trinidad and Tobago" [ref=e1080]
+                          - text: Trinidad and Tobago
+                      - option "Tuvalu Tuvalu" [ref=e1081]:
+                        - generic [ref=e1082]:
+                          - img "Tuvalu" [ref=e1083]
+                          - text: Tuvalu
+                      - option "Taiwan Taiwan" [ref=e1084]:
+                        - generic [ref=e1085]:
+                          - img "Taiwan" [ref=e1086]
+                          - text: Taiwan
+                      - option "Tanzania Tanzania" [ref=e1087]:
+                        - generic [ref=e1088]:
+                          - img "Tanzania" [ref=e1089]
+                          - text: Tanzania
+                      - option "Ukraine Ukraine" [ref=e1090]:
+                        - generic [ref=e1091]:
+                          - img "Ukraine" [ref=e1092]
+                          - text: Ukraine
+                      - option "Uganda Uganda" [ref=e1093]:
+                        - generic [ref=e1094]:
+                          - img "Uganda" [ref=e1095]
+                          - text: Uganda
+                      - option "U.S. Minor Outlying Islands U.S. Minor Outlying Islands" [ref=e1096]:
+                        - generic [ref=e1097]:
+                          - img "U.S. Minor Outlying Islands" [ref=e1098]
+                          - text: U.S. Minor Outlying Islands
+                      - option "United States United States" [ref=e1099]:
+                        - generic [ref=e1100]:
+                          - img "United States" [ref=e1101]
+                          - text: United States
+                      - option "Uruguay Uruguay" [ref=e1102]:
+                        - generic [ref=e1103]:
+                          - img "Uruguay" [ref=e1104]
+                          - text: Uruguay
+                      - option "Uzbekistan Uzbekistan" [ref=e1105]:
+                        - generic [ref=e1106]:
+                          - img "Uzbekistan" [ref=e1107]
+                          - text: Uzbekistan
+                      - option "Vatican City Vatican City" [ref=e1108]:
+                        - generic [ref=e1109]:
+                          - img "Vatican City" [ref=e1110]
+                          - text: Vatican City
+                      - option "Saint Vincent and the Grenadines Saint Vincent and the Grenadines" [ref=e1111]:
+                        - generic [ref=e1112]:
+                          - img "Saint Vincent and the Grenadines" [ref=e1113]
+                          - text: Saint Vincent and the Grenadines
+                      - option "Venezuela Venezuela" [ref=e1114]:
+                        - generic [ref=e1115]:
+                          - img "Venezuela" [ref=e1116]
+                          - text: Venezuela
+                      - option "British Virgin Islands British Virgin Islands" [ref=e1117]:
+                        - generic [ref=e1118]:
+                          - img "British Virgin Islands" [ref=e1119]
+                          - text: British Virgin Islands
+                      - option "U.S. Virgin Islands U.S. Virgin Islands" [ref=e1120]:
+                        - generic [ref=e1121]:
+                          - img "U.S. Virgin Islands" [ref=e1122]
+                          - text: U.S. Virgin Islands
+                      - option "Vietnam Vietnam" [ref=e1123]:
+                        - generic [ref=e1124]:
+                          - img "Vietnam" [ref=e1125]
+                          - text: Vietnam
+                      - option "Vanuatu Vanuatu" [ref=e1126]:
+                        - generic [ref=e1127]:
+                          - img "Vanuatu" [ref=e1128]
+                          - text: Vanuatu
+                      - option "Wallis and Futuna Wallis and Futuna" [ref=e1129]:
+                        - generic [ref=e1130]:
+                          - img "Wallis and Futuna" [ref=e1131]
+                          - text: Wallis and Futuna
+                      - option "Samoa Samoa" [ref=e1132]:
+                        - generic [ref=e1133]:
+                          - img "Samoa" [ref=e1134]
+                          - text: Samoa
+                      - option "Kosovo Kosovo" [ref=e1135]:
+                        - generic [ref=e1136]:
+                          - img "Kosovo" [ref=e1137]
+                          - text: Kosovo
+                      - option "Yemen Yemen" [ref=e1138]:
+                        - generic [ref=e1139]:
+                          - img "Yemen" [ref=e1140]
+                          - text: Yemen
+                      - option "Mayotte Mayotte" [ref=e1141]:
+                        - generic [ref=e1142]:
+                          - img "Mayotte" [ref=e1143]
+                          - text: Mayotte
+                      - option "South Africa South Africa" [ref=e1144]:
+                        - generic [ref=e1145]:
+                          - img "South Africa" [ref=e1146]
+                          - text: South Africa
+                      - option "Zambia Zambia" [ref=e1147]:
+                        - generic [ref=e1148]:
+                          - img "Zambia" [ref=e1149]
+                          - text: Zambia
+                      - option "Zimbabwe Zimbabwe" [ref=e1150]:
+                        - generic [ref=e1151]:
+                          - img "Zimbabwe" [ref=e1152]
+                          - text: Zimbabwe
+              - generic [ref=e190]:
+                - generic [ref=e191]: Pickup Address *
+                - combobox [ref=e192]:
+                  - generic: Destination Warehouse
+                  - img
+                - combobox [ref=e193]
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - generic [ref=e196]: Pieces Count *
+                - spinbutton [ref=e197]: "1"
+              - generic [ref=e198]:
+                - generic [ref=e199]: Weight (kg) *
+                - spinbutton [ref=e200]
+              - generic [ref=e201]:
+                - generic [ref=e202]: Volume (CBM)
+                - spinbutton [ref=e203]
+            - generic [ref=e204]:
+              - generic [ref=e205]:
+                - generic [ref=e206]: Shipping Method *
+                - combobox [ref=e207]:
+                  - generic: Air
+                  - img
+                - combobox [ref=e208]
+              - generic [ref=e209]:
+                - generic [ref=e210]: Carrier Name
+                - textbox "e.g. DHL, Aramex" [ref=e211]
+              - generic [ref=e212]:
+                - generic [ref=e213]: Tracking Number
+                - textbox "Tracking Number" [ref=e349]
+            - generic [ref=e215]:
+              - generic [ref=e216]:
+                - generic [ref=e217]: Payment Term *
+                - combobox [ref=e218]:
+                  - generic: Full Payment (Pre-Ship)
+                  - img
+                - combobox [ref=e219]
+              - generic [ref=e220]:
+                - generic [ref=e221]: Date
+                - textbox [ref=e222]: 2026-03-16
+            - generic [ref=e223]:
+              - generic [ref=e224]: Delivery Address
+              - textbox "Delivery Address..." [ref=e350]
+            - generic [ref=e226]:
+              - generic [ref=e227]: Description
+              - textbox "Cargo Description..." [ref=e351]
+            - generic [ref=e229]:
+              - generic [ref=e230]: Photos *
+              - generic [ref=e232] [cursor=pointer]:
+                - img [ref=e233]
+                - paragraph [ref=e236]: Drop photos here or click to select
+                - paragraph [ref=e237]: 0/10 photos
+            - generic [ref=e238]:
+              - button "Create Order" [disabled]
+              - link "Cancel" [ref=e352] [cursor=pointer]:
+                - /url: /orders
+                - button "Cancel" [ref=e353]
+  - region "Notifications alt+T"

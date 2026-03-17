@@ -1,0 +1,231 @@
+- generic:
+  - generic:
+    - generic:
+      - complementary:
+        - generic:
+          - generic:
+            - img
+          - generic:
+            - text: بيرفورمانس
+            - generic: فريت
+        - navigation:
+          - generic:
+            - paragraph: الرئيسية
+            - generic:
+              - link:
+                - /url: /
+                - img
+                - generic: لوحة التحكم
+          - generic:
+            - paragraph: العمليات
+            - generic:
+              - link:
+                - /url: /orders
+                - img
+                - generic: الطلبات
+              - link:
+                - /url: /shipments
+                - img
+                - generic: الشحنات
+              - link:
+                - /url: /purchases
+                - img
+                - generic: المشتريات
+          - generic:
+            - paragraph: المالية
+            - generic:
+              - link:
+                - /url: /invoices
+                - img
+                - generic: الفواتير
+              - link:
+                - /url: /payments
+                - img
+                - generic: المدفوعات
+              - link:
+                - /url: /finance/treasury
+                - img
+                - generic: الخزينة
+              - link:
+                - /url: /finance/exchange-rates
+                - img
+                - generic: أسعار الصرف
+          - generic:
+            - paragraph: الأشخاص
+            - generic:
+              - link:
+                - /url: /customers
+                - img
+                - generic: العملاء
+              - link:
+                - /url: /agents
+                - img
+                - generic: الوكلاء
+          - generic:
+            - paragraph: الإعدادات
+            - generic:
+              - link:
+                - /url: /shipping-rates
+                - img
+                - generic: أسعار الشحن
+              - link:
+                - /url: /settings/countries
+                - img
+                - generic: الدول
+              - link:
+                - /url: /settings/users
+                - img
+                - generic: المستخدمين
+              - link:
+                - /url: /settings
+                - img
+                - generic: الإعدادات
+              - link:
+                - /url: /settings/audit-log
+                - img
+                - generic: سجل التدقيق
+              - link:
+                - /url: /reports
+                - img
+                - generic: التقارير
+        - generic:
+          - generic:
+            - generic: A
+            - generic:
+              - paragraph: Admin
+              - paragraph: admin@shipping.test
+      - generic:
+        - banner:
+          - generic:
+            - img
+            - generic: البحث في الطلبات، الشحنات...
+            - generic: /
+          - generic:
+            - button:
+              - img
+              - generic: AR
+            - button:
+              - img
+            - button:
+              - img
+            - generic:
+              - generic:
+                - paragraph: Admin
+                - paragraph: admin
+              - generic: A
+              - button:
+                - img
+        - main:
+          - generic:
+            - generic:
+              - link:
+                - /url: /orders
+                - button:
+                  - img
+              - heading [level=1]: إنشاء طلب
+            - generic:
+              - generic:
+                - generic: تفاصيل الطلب
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: العميل *
+                      - combobox:
+                        - generic: اختر العميل
+                        - img
+                      - combobox
+                    - generic:
+                      - generic: الوكيل (اختياري)
+                      - combobox:
+                        - generic: اختر الوكيل
+                        - img
+                      - combobox
+                    - generic:
+                      - generic: نوع الخدمة *
+                      - combobox [expanded]:
+                        - generic: شحن
+                        - img
+                      - combobox
+                  - generic:
+                    - generic:
+                      - generic: دولة المصدر *
+                      - generic:
+                        - button:
+                          - generic: اختر المصدر
+                          - img
+                    - generic:
+                      - generic: دولة الوجهة *
+                      - generic:
+                        - button:
+                          - generic: اختر الوجهة
+                          - img
+                    - generic:
+                      - generic: عنوان الاستلام *
+                      - combobox:
+                        - generic: مستودع الوجهة
+                        - img
+                      - combobox
+                  - generic:
+                    - generic:
+                      - generic: عدد القطع *
+                      - spinbutton: "1"
+                    - generic:
+                      - generic: الوزن (kg) *
+                      - spinbutton
+                    - generic:
+                      - generic: الحجم (م³)
+                      - spinbutton
+                  - generic:
+                    - generic:
+                      - generic: طريقة الشحن *
+                      - combobox:
+                        - generic: جوي
+                        - img
+                      - combobox
+                    - generic:
+                      - generic: اسم الناقل
+                      - textbox:
+                        - /placeholder: e.g. DHL, Aramex
+                    - generic:
+                      - generic: رقم التتبع
+                      - textbox:
+                        - /placeholder: رقم التتبع
+                  - generic:
+                    - generic:
+                      - generic: شروط الدفع *
+                      - combobox:
+                        - generic: دفع كامل (قبل الشحن)
+                        - img
+                      - combobox
+                    - generic:
+                      - generic: التاريخ
+                      - textbox: 2026-03-16
+                  - generic:
+                    - generic: عنوان التسليم
+                    - textbox:
+                      - /placeholder: عنوان التسليم...
+                  - generic:
+                    - generic: الوصف
+                    - textbox:
+                      - /placeholder: وصف البضاعة...
+                  - generic:
+                    - generic: الصور *
+                    - generic:
+                      - generic:
+                        - img
+                        - paragraph: اسحب الصور هنا أو انقر للاختيار
+                        - paragraph: 0/10 صور
+                  - generic:
+                    - button [disabled]: إنشاء طلب
+                    - link:
+                      - /url: /orders
+                      - button: إلغاء
+      - region "Notifications alt+T"
+  - listbox [ref=e241]:
+    - option "شحن" [active] [selected] [ref=e242]:
+      - generic [ref=e244]:
+        - img
+      - generic [ref=e245]: شحن
+    - option "شراء للعميل" [ref=e246]:
+      - generic [ref=e248]: شراء للعميل

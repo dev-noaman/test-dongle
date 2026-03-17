@@ -1,0 +1,209 @@
+- generic [ref=e74]:
+  - complementary [ref=e75]:
+    - generic [ref=e76]:
+      - img [ref=e78]
+      - generic [ref=e81]:
+        - text: بيرفورمانس
+        - generic [ref=e82]: فريت
+    - navigation [ref=e83]:
+      - generic [ref=e338]:
+        - paragraph [ref=e339]: الرئيسية
+        - link "لوحة التحكم" [ref=e341] [cursor=pointer]:
+          - /url: /
+          - img [ref=e342]
+          - generic [ref=e347]: لوحة التحكم
+      - generic [ref=e348]:
+        - paragraph [ref=e349]: العمليات
+        - generic [ref=e350]:
+          - link "الطلبات" [ref=e351] [cursor=pointer]:
+            - /url: /orders
+            - img [ref=e352]
+            - generic [ref=e356]: الطلبات
+          - link "الشحنات" [ref=e357] [cursor=pointer]:
+            - /url: /shipments
+            - img [ref=e358]
+            - generic [ref=e362]: الشحنات
+          - link "المشتريات" [ref=e363] [cursor=pointer]:
+            - /url: /purchases
+            - img [ref=e364]
+            - generic [ref=e368]: المشتريات
+      - generic [ref=e369]:
+        - paragraph [ref=e370]: المالية
+        - generic [ref=e371]:
+          - link "الفواتير" [ref=e372] [cursor=pointer]:
+            - /url: /invoices
+            - img [ref=e373]
+            - generic [ref=e376]: الفواتير
+          - link "المدفوعات" [ref=e377] [cursor=pointer]:
+            - /url: /payments
+            - img [ref=e378]
+            - generic [ref=e380]: المدفوعات
+          - link "الخزينة" [ref=e381] [cursor=pointer]:
+            - /url: /finance/treasury
+            - img [ref=e382]
+            - generic [ref=e385]: الخزينة
+          - link "أسعار الصرف" [ref=e386] [cursor=pointer]:
+            - /url: /finance/exchange-rates
+            - img [ref=e387]
+            - generic [ref=e389]: أسعار الصرف
+      - generic [ref=e390]:
+        - paragraph [ref=e391]: الأشخاص
+        - generic [ref=e392]:
+          - link "العملاء" [ref=e393] [cursor=pointer]:
+            - /url: /customers
+            - img [ref=e394]
+            - generic [ref=e399]: العملاء
+          - link "الوكلاء" [ref=e400] [cursor=pointer]:
+            - /url: /agents
+            - img [ref=e401]
+            - generic [ref=e405]: الوكلاء
+      - generic [ref=e406]:
+        - paragraph [ref=e407]: الإعدادات
+        - generic [ref=e408]:
+          - link "أسعار الشحن" [ref=e409] [cursor=pointer]:
+            - /url: /shipping-rates
+            - img [ref=e410]
+            - generic [ref=e413]: أسعار الشحن
+          - link "الدول" [ref=e414] [cursor=pointer]:
+            - /url: /settings/countries
+            - img [ref=e415]
+            - generic [ref=e418]: الدول
+          - link "المستخدمين" [ref=e419] [cursor=pointer]:
+            - /url: /settings/users
+            - img [ref=e420]
+            - generic [ref=e422]: المستخدمين
+          - link "الإعدادات" [ref=e423] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e424]
+            - generic [ref=e427]: الإعدادات
+          - link "سجل التدقيق" [ref=e428] [cursor=pointer]:
+            - /url: /settings/audit-log
+            - img [ref=e429]
+            - generic [ref=e434]: سجل التدقيق
+          - link "التقارير" [ref=e435] [cursor=pointer]:
+            - /url: /reports
+            - img [ref=e436]
+            - generic [ref=e438]: التقارير
+    - generic [ref=e186]:
+      - generic [ref=e187]: A
+      - generic [ref=e188]:
+        - paragraph [ref=e189]: Admin
+        - paragraph [ref=e190]: admin@shipping.test
+  - generic [ref=e191]:
+    - banner [ref=e192]:
+      - generic [ref=e193] [cursor=pointer]:
+        - img [ref=e194]
+        - generic [ref=e197]: البحث في الطلبات، الشحنات...
+        - generic [ref=e198]: /
+      - generic [ref=e199]:
+        - button "AR" [active] [ref=e439]:
+          - img [ref=e201]
+          - generic [ref=e204]: AR
+        - button "التبديل إلى light" [ref=e440]:
+          - img [ref=e206]
+        - button "الإشعارات" [ref=e441]:
+          - img [ref=e209]
+        - generic [ref=e213]:
+          - generic [ref=e214]:
+            - paragraph [ref=e215]: Admin
+            - paragraph [ref=e216]: admin
+          - generic [ref=e217]: A
+          - button "تسجيل الخروج" [ref=e442]:
+            - img [ref=e219]
+    - main [ref=e222]:
+      - generic [ref=e223]:
+        - generic [ref=e224]:
+          - generic [ref=e225]:
+            - link [ref=e226] [cursor=pointer]:
+              - /url: /orders
+              - button [ref=e227]:
+                - img
+            - generic [ref=e228]:
+              - generic [ref=e229]:
+                - heading "ORD-20260316-0003" [level=1] [ref=e230]
+                - generic [ref=e231]: جديد
+              - paragraph [ref=e232]: التاريخ 3/16/2026
+          - generic [ref=e233]:
+            - link "تصدير PDF" [ref=e443] [cursor=pointer]:
+              - /url: /orders/3/pdf
+              - button "تصدير PDF" [ref=e444]:
+                - img
+                - text: تصدير PDF
+            - link "تعديل" [ref=e445] [cursor=pointer]:
+              - /url: /orders/3/edit
+              - button "تعديل" [ref=e446]:
+                - img
+                - text: تعديل
+            - button "حذف" [ref=e447]:
+              - img
+              - text: حذف
+        - generic [ref=e241]:
+          - generic [ref=e242]: Egypt
+          - generic [ref=e243]: →
+          - generic [ref=e244]: Egypt
+        - generic [ref=e245]:
+          - generic [ref=e246]:
+            - generic [ref=e248]:
+              - img [ref=e249]
+              - text: تفاصيل الطلب
+            - generic [ref=e253]:
+              - generic [ref=e448]:
+                - generic [ref=e449]: نوع الخدمة
+                - generic [ref=e450]: شراء للعميل
+              - generic [ref=e451]:
+                - generic [ref=e452]: الحالة
+                - generic [ref=e454]: جديد
+              - generic [ref=e455]:
+                - generic [ref=e456]: نقطة التحصيل
+                - generic [ref=e457]: ORIGIN WAREHOUSE
+              - generic [ref=e458]:
+                - generic [ref=e459]: عملة الفاتورة
+                - generic [ref=e460]: EGP
+          - generic [ref=e267]:
+            - generic [ref=e269]:
+              - img [ref=e270]
+              - text: تفاصيل البضاعة
+            - generic [ref=e273]:
+              - generic [ref=e461]:
+                - generic [ref=e462]: عدد القطع
+                - generic [ref=e463]: "1"
+              - generic [ref=e464]:
+                - generic [ref=e465]: الوزن التقديري
+                - generic [ref=e467]: 3.00 kg
+          - generic [ref=e281]:
+            - generic [ref=e283]:
+              - img [ref=e284]
+              - text: تفاصيل الدفع
+            - generic [ref=e468]:
+              - generic [ref=e469]: طريقة الدفع
+              - generic [ref=e471]: PRE SHIP
+        - generic [ref=e292]:
+          - generic [ref=e294]:
+            - img [ref=e295]
+            - text: معلومات الشحن
+          - generic [ref=e472]:
+            - generic [ref=e473]: طريقة الشحن
+            - generic [ref=e475]:
+              - img [ref=e476]
+              - text: AIR
+        - generic [ref=e308]:
+          - generic [ref=e310]:
+            - img [ref=e311]
+            - text: العميل
+          - generic [ref=e314]:
+            - paragraph [ref=e315]: Ahmed Hassan
+            - paragraph [ref=e316]: "+201012345678"
+            - paragraph [ref=e317]: ahmed.hassan@example.com
+        - generic [ref=e318]:
+          - generic [ref=e320]:
+            - img [ref=e321]
+            - text: استلام المبلغ
+          - paragraph [ref=e325]: Qatar Office
+        - generic [ref=e326]:
+          - generic [ref=e328]:
+            - img [ref=e329]
+            - text: الصور (1)
+          - link "test-photo.jpg" [ref=e335] [cursor=pointer]:
+            - /url: https://performance.noaman.cloud/storage/2/test-photo.jpg
+            - img "test-photo.jpg" [ref=e337]
+  - region "Notifications alt+T"

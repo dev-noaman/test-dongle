@@ -1,0 +1,283 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e74]:
+    - complementary [ref=e75]:
+      - generic [ref=e76]:
+        - img [ref=e78]
+        - generic [ref=e81]:
+          - text: Performance
+          - generic [ref=e82]: Freight
+      - navigation [ref=e83]:
+        - generic [ref=e84]:
+          - paragraph [ref=e85]: Main
+          - link "Dashboard" [ref=e87] [cursor=pointer]:
+            - /url: /
+            - img [ref=e88]
+            - generic [ref=e93]: Dashboard
+        - generic [ref=e95]:
+          - paragraph [ref=e96]: Operations
+          - generic [ref=e97]:
+            - link "Orders" [ref=e98] [cursor=pointer]:
+              - /url: /orders
+              - img [ref=e99]
+              - generic [ref=e103]: Orders
+            - link "Shipments" [ref=e104] [cursor=pointer]:
+              - /url: /shipments
+              - img [ref=e105]
+              - generic [ref=e109]: Shipments
+            - link "Purchases" [ref=e110] [cursor=pointer]:
+              - /url: /purchases
+              - img [ref=e111]
+              - generic [ref=e115]: Purchases
+        - generic [ref=e116]:
+          - paragraph [ref=e117]: Finance
+          - generic [ref=e118]:
+            - link "Invoices" [ref=e119] [cursor=pointer]:
+              - /url: /invoices
+              - img [ref=e120]
+              - generic [ref=e123]: Invoices
+            - link "Payments" [ref=e124] [cursor=pointer]:
+              - /url: /payments
+              - img [ref=e125]
+              - generic [ref=e127]: Payments
+            - link "Treasury" [ref=e128] [cursor=pointer]:
+              - /url: /finance/treasury
+              - img [ref=e129]
+              - generic [ref=e132]: Treasury
+            - link "Exchange Rates" [ref=e133] [cursor=pointer]:
+              - /url: /finance/exchange-rates
+              - img [ref=e134]
+              - generic [ref=e136]: Exchange Rates
+        - generic [ref=e137]:
+          - paragraph [ref=e138]: People
+          - generic [ref=e139]:
+            - link "Customers" [ref=e140] [cursor=pointer]:
+              - /url: /customers
+              - img [ref=e141]
+              - generic [ref=e146]: Customers
+            - link "Agents" [ref=e147] [cursor=pointer]:
+              - /url: /agents
+              - img [ref=e148]
+              - generic [ref=e152]: Agents
+        - generic [ref=e153]:
+          - paragraph [ref=e154]: Settings
+          - generic [ref=e155]:
+            - link "Shipping Rates" [ref=e156] [cursor=pointer]:
+              - /url: /shipping-rates
+              - img [ref=e157]
+              - generic [ref=e160]: Shipping Rates
+            - link "Countries" [ref=e161] [cursor=pointer]:
+              - /url: /settings/countries
+              - img [ref=e162]
+              - generic [ref=e165]: Countries
+            - link "Users" [ref=e166] [cursor=pointer]:
+              - /url: /settings/users
+              - img [ref=e167]
+              - generic [ref=e169]: Users
+            - link "Language" [ref=e170] [cursor=pointer]:
+              - /url: /settings/language
+              - img [ref=e171]
+              - generic [ref=e174]: Language
+            - link "Settings" [ref=e175] [cursor=pointer]:
+              - /url: /settings
+              - img [ref=e176]
+              - generic [ref=e179]: Settings
+            - link "Audit Log" [ref=e180] [cursor=pointer]:
+              - /url: /settings/audit-log
+              - img [ref=e181]
+              - generic [ref=e186]: Audit Log
+            - link "Reports" [ref=e187] [cursor=pointer]:
+              - /url: /reports
+              - img [ref=e188]
+              - generic [ref=e190]: Reports
+      - generic [ref=e192]:
+        - generic [ref=e193]: A
+        - generic [ref=e194]:
+          - paragraph [ref=e195]: Admin
+          - paragraph [ref=e196]: admin@shipping.test
+    - generic [ref=e197]:
+      - banner [ref=e198]:
+        - generic [ref=e199] [cursor=pointer]:
+          - img [ref=e200]
+          - generic [ref=e203]: Search orders, shipments...
+          - generic [ref=e204]: /
+        - generic [ref=e205]:
+          - button "EN" [ref=e206]:
+            - img [ref=e207]
+            - generic [ref=e210]: EN
+          - button "Switch to light" [ref=e211]:
+            - img [ref=e212]
+          - button "Notifications" [ref=e214]:
+            - img [ref=e215]
+          - generic [ref=e219]:
+            - generic [ref=e220]:
+              - paragraph [ref=e221]: Admin
+              - paragraph [ref=e222]: admin
+            - generic [ref=e223]: A
+            - button "Logout" [ref=e224]:
+              - img [ref=e225]
+      - main [ref=e228]:
+        - generic [ref=e229]:
+          - generic [ref=e230]:
+            - generic [ref=e231]:
+              - heading "Dashboard" [level=1] [ref=e232]
+              - paragraph [ref=e233]: Overview
+            - generic [ref=e234]:
+              - img [ref=e235]
+              - generic [ref=e237]: Today
+          - generic [ref=e238]:
+            - link "Total Orders 1 1 pending" [ref=e239] [cursor=pointer]:
+              - /url: /orders
+              - generic [ref=e240]:
+                - generic [ref=e243]:
+                  - generic [ref=e244]:
+                    - paragraph [ref=e245]: Total Orders
+                    - paragraph [ref=e246]: "1"
+                    - generic [ref=e247]:
+                      - img [ref=e248]
+                      - generic [ref=e251]: 1 pending
+                  - img [ref=e253]
+                - img [ref=e258]
+            - link "Shipments 0 0 Total" [ref=e260] [cursor=pointer]:
+              - /url: /shipments
+              - generic [ref=e261]:
+                - generic [ref=e264]:
+                  - generic [ref=e265]:
+                    - paragraph [ref=e266]: Shipments
+                    - paragraph [ref=e267]: "0"
+                    - generic [ref=e268]:
+                      - img [ref=e269]
+                      - generic [ref=e272]: 0 Total
+                  - img [ref=e274]
+                - img [ref=e279]
+            - link "Invoices 3 0 pending" [ref=e281] [cursor=pointer]:
+              - /url: /invoices
+              - generic [ref=e282]:
+                - generic [ref=e285]:
+                  - generic [ref=e286]:
+                    - paragraph [ref=e287]: Invoices
+                    - paragraph [ref=e288]: "3"
+                    - generic [ref=e290]: 0 pending
+                  - img [ref=e292]
+                - img [ref=e296]
+            - link "Total Revenue E£ 0.00 E£ 0 pending" [ref=e298] [cursor=pointer]:
+              - /url: /finance/treasury
+              - generic [ref=e299]:
+                - generic [ref=e302]:
+                  - generic [ref=e303]:
+                    - paragraph [ref=e304]: Total Revenue
+                    - paragraph [ref=e305]: E£ 0.00
+                    - generic [ref=e306]:
+                      - img [ref=e307]
+                      - generic [ref=e310]: E£ 0 pending
+                  - img [ref=e312]
+                - img [ref=e315]
+          - generic [ref=e317]:
+            - generic [ref=e318]:
+              - img [ref=e320]
+              - generic [ref=e323]:
+                - paragraph [ref=e324]: Pending Orders
+                - paragraph [ref=e325]: "1"
+            - generic [ref=e326]:
+              - img [ref=e328]
+              - generic [ref=e332]:
+                - paragraph [ref=e333]: In Progress
+                - paragraph [ref=e334]: "0"
+            - generic [ref=e335]:
+              - img [ref=e337]
+              - generic [ref=e340]:
+                - paragraph [ref=e341]: Completed Orders
+                - paragraph [ref=e342]: "0"
+            - generic [ref=e343]:
+              - img [ref=e345]
+              - generic [ref=e348]:
+                - paragraph [ref=e349]: Paid Invoices
+                - paragraph [ref=e350]: "3"
+          - generic [ref=e351]:
+            - generic [ref=e352]:
+              - generic [ref=e354]:
+                - img [ref=e356]
+                - generic [ref=e359]: Revenue by Currency
+              - application [ref=e363]:
+                - generic [ref=e367]:
+                  - generic [ref=e368]:
+                    - generic [ref=e370]: Oct 2025
+                    - generic [ref=e372]: Nov 2025
+                    - generic [ref=e374]: Dec 2025
+                    - generic [ref=e376]: Jan 2026
+                    - generic [ref=e378]: Mar 2026
+                  - generic [ref=e379]:
+                    - generic [ref=e381]: "0"
+                    - generic [ref=e383]: "1"
+                    - generic [ref=e385]: "2"
+                    - generic [ref=e387]: "3"
+                    - generic [ref=e389]: "4"
+            - generic [ref=e390]:
+              - generic [ref=e392]:
+                - img [ref=e394]
+                - generic [ref=e398]: Orders by Service
+              - generic [ref=e401]:
+                - list [ref=e403]:
+                  - listitem [ref=e404]:
+                    - img "NEW legend icon" [ref=e405]
+                    - text: NEW
+                - application [ref=e407]
+          - generic [ref=e414]:
+            - generic [ref=e415]:
+              - generic [ref=e417]:
+                - img [ref=e419]
+                - generic [ref=e424]: Shipments by Status
+              - generic [ref=e426]:
+                - img [ref=e427]
+                - paragraph [ref=e431]: No data available for this period
+            - generic [ref=e433]:
+              - img [ref=e435]
+              - paragraph [ref=e440]: Customers
+              - paragraph [ref=e441]: "9"
+              - link "View" [ref=e442] [cursor=pointer]:
+                - /url: /customers
+                - button "View" [ref=e443]:
+                  - text: View
+                  - img
+            - generic [ref=e445]:
+              - img [ref=e447]
+              - paragraph [ref=e451]: Agents
+              - paragraph [ref=e452]: "6"
+              - link "View" [ref=e453] [cursor=pointer]:
+                - /url: /agents
+                - button "View" [ref=e454]:
+                  - text: View
+                  - img
+          - generic [ref=e455]:
+            - generic [ref=e456]:
+              - generic [ref=e457]:
+                - generic [ref=e458]:
+                  - img [ref=e460]
+                  - generic [ref=e464]: Recent Activity - Orders
+                - link "View" [ref=e465] [cursor=pointer]:
+                  - /url: /orders
+                  - generic [ref=e466]:
+                    - text: View
+                    - img [ref=e467]
+              - generic [ref=e471]:
+                - generic [ref=e472]:
+                  - img [ref=e474]
+                  - generic [ref=e478]:
+                    - link "ORD-20260313-0001" [ref=e479] [cursor=pointer]:
+                      - /url: /orders/1
+                    - paragraph [ref=e480]: Ahmed Hassan
+                - generic [ref=e481]: New
+            - generic [ref=e482]:
+              - generic [ref=e483]:
+                - generic [ref=e484]:
+                  - img [ref=e486]
+                  - generic [ref=e490]: Recent Activity - Shipments
+                - link "View" [ref=e491] [cursor=pointer]:
+                  - /url: /shipments
+                  - generic [ref=e492]:
+                    - text: View
+                    - img [ref=e493]
+              - generic [ref=e496]:
+                - img [ref=e497]
+                - paragraph [ref=e501]: No data available for this period
+    - region "Notifications alt+T"
+  - generic [ref=e502]: "0"

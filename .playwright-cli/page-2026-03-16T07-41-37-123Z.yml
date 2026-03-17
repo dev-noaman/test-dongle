@@ -1,0 +1,243 @@
+- generic:
+  - generic:
+    - generic:
+      - complementary:
+        - generic:
+          - generic:
+            - img
+          - generic:
+            - text: Performance
+            - generic: Freight
+        - navigation:
+          - generic:
+            - paragraph: Main
+            - generic:
+              - link:
+                - /url: /
+                - img
+                - generic: Dashboard
+          - generic:
+            - paragraph: Operations
+            - generic:
+              - link:
+                - /url: /orders
+                - img
+                - generic: Orders
+              - link:
+                - /url: /shipments
+                - img
+                - generic: Shipments
+              - link:
+                - /url: /purchases
+                - img
+                - generic: Purchases
+          - generic:
+            - paragraph: Finance
+            - generic:
+              - link:
+                - /url: /invoices
+                - img
+                - generic: Invoices
+              - link:
+                - /url: /payments
+                - img
+                - generic: Payments
+              - link:
+                - /url: /finance/treasury
+                - img
+                - generic: Treasury
+              - link:
+                - /url: /finance/exchange-rates
+                - img
+                - generic: Exchange Rates
+          - generic:
+            - paragraph: People
+            - generic:
+              - link:
+                - /url: /customers
+                - img
+                - generic: Customers
+              - link:
+                - /url: /agents
+                - img
+                - generic: Agents
+          - generic:
+            - paragraph: Settings
+            - generic:
+              - link:
+                - /url: /shipping-rates
+                - img
+                - generic: Shipping Rates
+              - link:
+                - /url: /settings/countries
+                - img
+                - generic: Countries
+              - link:
+                - /url: /settings/users
+                - img
+                - generic: Users
+              - link:
+                - /url: /settings
+                - img
+                - generic: Settings
+              - link:
+                - /url: /settings/audit-log
+                - img
+                - generic: Audit Log
+              - link:
+                - /url: /reports
+                - img
+                - generic: Reports
+        - generic:
+          - generic:
+            - generic: A
+            - generic:
+              - paragraph: Admin
+              - paragraph: admin@shipping.test
+      - generic:
+        - banner:
+          - generic:
+            - img
+            - generic: Search orders, shipments...
+            - generic: /
+          - generic:
+            - button:
+              - img
+              - generic: EN
+            - button:
+              - img
+            - button:
+              - img
+            - generic:
+              - generic:
+                - paragraph: Admin
+                - paragraph: admin
+              - generic: A
+              - button:
+                - img
+        - main:
+          - generic:
+            - generic:
+              - link:
+                - /url: /orders
+                - button:
+                  - img
+              - heading [level=1]: Create Order
+            - generic:
+              - generic:
+                - generic: Order Details
+              - generic:
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic: Customer *
+                      - combobox [expanded]:
+                        - generic: Select Customer
+                        - img
+                      - combobox
+                    - generic:
+                      - generic: Agent (Optional)
+                      - combobox:
+                        - generic: Select Agent
+                        - img
+                      - combobox
+                    - generic:
+                      - generic: Service Type *
+                      - combobox:
+                        - generic: Shipping
+                        - img
+                      - combobox
+                  - generic:
+                    - generic:
+                      - generic: Origin Country *
+                      - generic:
+                        - button:
+                          - generic: Select Origin
+                          - img
+                    - generic:
+                      - generic: Destination Country *
+                      - generic:
+                        - button:
+                          - generic: Select Destination
+                          - img
+                    - generic:
+                      - generic: Pickup Address *
+                      - combobox:
+                        - generic: Destination Warehouse
+                        - img
+                      - combobox
+                  - generic:
+                    - generic:
+                      - generic: Pieces Count *
+                      - spinbutton: "1"
+                    - generic:
+                      - generic: Weight (kg) *
+                      - spinbutton
+                    - generic:
+                      - generic: Volume (CBM)
+                      - spinbutton
+                  - generic:
+                    - generic:
+                      - generic: Shipping Method *
+                      - combobox:
+                        - generic: Air
+                        - img
+                      - combobox
+                    - generic:
+                      - generic: Carrier Name
+                      - textbox:
+                        - /placeholder: e.g. DHL, Aramex
+                    - generic:
+                      - generic: Tracking Number
+                      - textbox:
+                        - /placeholder: Tracking Number
+                  - generic:
+                    - generic:
+                      - generic: Payment Term *
+                      - combobox:
+                        - generic: Full Payment (Pre-Ship)
+                        - img
+                      - combobox
+                    - generic:
+                      - generic: Date
+                      - textbox: 2026-03-16
+                  - generic:
+                    - generic: Delivery Address
+                    - textbox:
+                      - /placeholder: Delivery Address...
+                  - generic:
+                    - generic: Description
+                    - textbox:
+                      - /placeholder: Cargo Description...
+                  - generic:
+                    - generic: Photos *
+                    - generic:
+                      - generic:
+                        - img
+                        - paragraph: Drop photos here or click to select
+                        - paragraph: 0/10 photos
+                  - generic:
+                    - button [disabled]: Create Order
+                    - link:
+                      - /url: /orders
+                      - button: Cancel
+      - region "Notifications alt+T"
+  - listbox [ref=e354]:
+    - option "Ahmed Hassan" [active] [ref=e355]:
+      - generic [ref=e357]: Ahmed Hassan
+    - option "Fatma Ali" [ref=e358]:
+      - generic [ref=e360]: Fatma Ali
+    - option "Khalid Al-Thani" [ref=e361]:
+      - generic [ref=e363]: Khalid Al-Thani
+    - option "Mohamed Ibrahim" [ref=e364]:
+      - generic [ref=e366]: Mohamed Ibrahim
+    - option "Nasser Al-Mansouri" [ref=e367]:
+      - generic [ref=e369]: Nasser Al-Mansouri
+    - option "Test Cust 1773365846055" [ref=e370]:
+      - generic [ref=e372]: Test Cust 1773365846055
+    - option "Test Cust 1773366095649" [ref=e373]:
+      - generic [ref=e375]: Test Cust 1773366095649
+    - option "Test Customer E2E" [ref=e376]:
+      - generic [ref=e378]: Test Customer E2E
+    - option "Test Customer E2E" [ref=e379]:
+      - generic [ref=e381]: Test Customer E2E

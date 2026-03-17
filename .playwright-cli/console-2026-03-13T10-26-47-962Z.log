@@ -1,0 +1,6 @@
+Total messages: 5 (Errors: 0, Warnings: 0)
+Returning 3 messages for level "info"
+
+[INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://[::1]:5176/node_modules/.vite/deps/react-dom_client.js?v=d0c6809b:20102
+[INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ http://[::1]:5176/node_modules/.vite/deps/chunk-ZQIIMNIJ.js?v=d0c6809b:1778
+[VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:9999/login:0

@@ -1,0 +1,19 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - heading "Language Settings" [level=1] [ref=e5]
+    - paragraph [ref=e6]: Choose your preferred language for the application interface.
+  - generic [ref=e7]:
+    - button "🇺🇸 English English" [ref=e8]:
+      - img [ref=e11]
+      - generic [ref=e13]: 🇺🇸
+      - generic [ref=e14]:
+        - generic [ref=e16]: English
+        - paragraph [ref=e17]: English
+    - button "🇪🇬 Arabic RTL العربية" [ref=e18]:
+      - generic [ref=e19]: 🇪🇬
+      - generic [ref=e20]:
+        - generic [ref=e21]:
+          - generic [ref=e22]: Arabic
+          - generic [ref=e23]: RTL
+        - paragraph [ref=e24]: العربية
+  - paragraph [ref=e26]: Your language preference will be saved and remembered the next time you log in.

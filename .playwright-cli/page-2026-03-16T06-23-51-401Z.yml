@@ -1,0 +1,164 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e10]:
+        - text: بيرفورمانس
+        - generic [ref=e11]: فريت
+    - navigation [ref=e12]:
+      - generic [ref=e13]:
+        - paragraph [ref=e14]: الرئيسية
+        - link "لوحة التحكم" [ref=e16] [cursor=pointer]:
+          - /url: /
+          - img [ref=e17]
+          - generic [ref=e22]: لوحة التحكم
+      - generic [ref=e23]:
+        - paragraph [ref=e24]: العمليات
+        - generic [ref=e25]:
+          - link "الطلبات" [ref=e26] [cursor=pointer]:
+            - /url: /orders
+            - img [ref=e27]
+            - generic [ref=e31]: الطلبات
+          - link "الشحنات" [ref=e32] [cursor=pointer]:
+            - /url: /shipments
+            - img [ref=e33]
+            - generic [ref=e37]: الشحنات
+          - link "المشتريات" [ref=e38] [cursor=pointer]:
+            - /url: /purchases
+            - img [ref=e39]
+            - generic [ref=e43]: المشتريات
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: المالية
+        - generic [ref=e46]:
+          - link "الفواتير" [ref=e47] [cursor=pointer]:
+            - /url: /invoices
+            - img [ref=e48]
+            - generic [ref=e51]: الفواتير
+          - link "المدفوعات" [ref=e52] [cursor=pointer]:
+            - /url: /payments
+            - img [ref=e53]
+            - generic [ref=e55]: المدفوعات
+          - link "الخزينة" [ref=e56] [cursor=pointer]:
+            - /url: /finance/treasury
+            - img [ref=e57]
+            - generic [ref=e60]: الخزينة
+          - link "أسعار الصرف" [ref=e61] [cursor=pointer]:
+            - /url: /finance/exchange-rates
+            - img [ref=e62]
+            - generic [ref=e64]: أسعار الصرف
+      - generic [ref=e65]:
+        - paragraph [ref=e66]: الأشخاص
+        - generic [ref=e67]:
+          - link "العملاء" [ref=e68] [cursor=pointer]:
+            - /url: /customers
+            - img [ref=e69]
+            - generic [ref=e74]: العملاء
+          - link "الوكلاء" [ref=e75] [cursor=pointer]:
+            - /url: /agents
+            - img [ref=e76]
+            - generic [ref=e80]: الوكلاء
+      - generic [ref=e81]:
+        - paragraph [ref=e82]: الإعدادات
+        - generic [ref=e83]:
+          - link "أسعار الشحن" [ref=e84] [cursor=pointer]:
+            - /url: /shipping-rates
+            - img [ref=e85]
+            - generic [ref=e88]: أسعار الشحن
+          - link "الدول" [ref=e89] [cursor=pointer]:
+            - /url: /settings/countries
+            - img [ref=e90]
+            - generic [ref=e93]: الدول
+          - link "المستخدمين" [ref=e94] [cursor=pointer]:
+            - /url: /settings/users
+            - img [ref=e95]
+            - generic [ref=e97]: المستخدمين
+          - link "الإعدادات" [ref=e98] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e99]
+            - generic [ref=e102]: الإعدادات
+          - link "سجل التدقيق" [ref=e103] [cursor=pointer]:
+            - /url: /settings/audit-log
+            - img [ref=e104]
+            - generic [ref=e109]: سجل التدقيق
+          - link "التقارير" [ref=e110] [cursor=pointer]:
+            - /url: /reports
+            - img [ref=e111]
+            - generic [ref=e113]: التقارير
+    - generic [ref=e115]:
+      - generic [ref=e116]: A
+      - generic [ref=e117]:
+        - paragraph [ref=e118]: Admin
+        - paragraph [ref=e119]: admin@shipping.test
+  - generic [ref=e120]:
+    - banner [ref=e121]:
+      - generic [ref=e122] [cursor=pointer]:
+        - img [ref=e123]
+        - generic [ref=e126]: البحث في الطلبات، الشحنات...
+        - generic [ref=e127]: /
+      - generic [ref=e128]:
+        - button "AR" [ref=e129]:
+          - img [ref=e130]
+          - generic [ref=e133]: AR
+        - button "التبديل إلى light" [ref=e134]:
+          - img [ref=e135]
+        - button "الإشعارات" [ref=e137]:
+          - img [ref=e138]
+        - generic [ref=e142]:
+          - generic [ref=e143]:
+            - paragraph [ref=e144]: Admin
+            - paragraph [ref=e145]: admin
+          - generic [ref=e146]: A
+          - button "تسجيل الخروج" [ref=e147]:
+            - img [ref=e148]
+    - main [ref=e151]:
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - img [ref=e156]
+            - generic [ref=e160]:
+              - heading "المشتريات" [level=1] [ref=e161]
+              - paragraph [ref=e162]: قائمة المشتريات
+          - link "إنشاء عملية شراء" [ref=e163] [cursor=pointer]:
+            - /url: /purchases/create
+            - button "إنشاء عملية شراء" [ref=e164]:
+              - img
+              - text: إنشاء عملية شراء
+        - generic [ref=e166]:
+          - generic [ref=e167]:
+            - img [ref=e168]
+            - textbox "بحث..." [ref=e171]
+          - combobox [ref=e172]:
+            - generic: كل الحالات
+            - img
+          - combobox [ref=e173]
+          - combobox [ref=e174]:
+            - generic: الكل
+            - img
+          - combobox [ref=e175]
+          - combobox [ref=e176]:
+            - generic: الاسم
+            - img
+          - combobox [ref=e177]
+          - button "تصفية" [ref=e178]:
+            - img
+            - text: تصفية
+        - table [ref=e181]:
+          - rowgroup [ref=e182]:
+            - row "رقم عملية الشراء الطلب الاسم اسم المورد الدولة القيمة الإجمالية الحالة حالة الدفع الإجراءات" [ref=e183]:
+              - columnheader "رقم عملية الشراء" [ref=e184]
+              - columnheader "الطلب" [ref=e185]
+              - columnheader "الاسم" [ref=e186]
+              - columnheader "اسم المورد" [ref=e187]
+              - columnheader "الدولة" [ref=e188]
+              - columnheader "القيمة الإجمالية" [ref=e189]
+              - columnheader "الحالة" [ref=e190]
+              - columnheader "حالة الدفع" [ref=e191]
+              - columnheader "الإجراءات" [ref=e192]
+          - rowgroup [ref=e193]:
+            - row "لا توجد مشتريات" [ref=e194]:
+              - cell "لا توجد مشتريات" [ref=e195]:
+                - generic [ref=e196]:
+                  - img [ref=e198]
+                  - paragraph [ref=e202]: لا توجد مشتريات
+        - paragraph [ref=e204]: عرض 0 من 0 نتائج
+  - region "Notifications alt+T"

@@ -1,0 +1,241 @@
+- generic [ref=e1052]:
+  - complementary [ref=e1053]:
+    - generic [ref=e1054]:
+      - img [ref=e1056]
+      - generic [ref=e1059]:
+        - text: بيرفورمانس
+        - generic [ref=e1060]: فريت
+    - navigation [ref=e1061]:
+      - generic [ref=e1062]:
+        - paragraph [ref=e1063]: الرئيسية
+        - link "لوحة التحكم" [ref=e1065] [cursor=pointer]:
+          - /url: /
+          - img [ref=e1066]
+          - generic [ref=e1071]: لوحة التحكم
+      - generic [ref=e1072]:
+        - paragraph [ref=e1073]: العمليات
+        - generic [ref=e1074]:
+          - link "الطلبات" [ref=e1075] [cursor=pointer]:
+            - /url: /orders
+            - img [ref=e1076]
+            - generic [ref=e1080]: الطلبات
+          - link "الشحنات" [ref=e1081] [cursor=pointer]:
+            - /url: /shipments
+            - img [ref=e1082]
+            - generic [ref=e1086]: الشحنات
+          - link "المشتريات" [ref=e1087] [cursor=pointer]:
+            - /url: /purchases
+            - img [ref=e1088]
+            - generic [ref=e1092]: المشتريات
+      - generic [ref=e1093]:
+        - paragraph [ref=e1094]: المالية
+        - generic [ref=e1095]:
+          - link "الفواتير" [ref=e1096] [cursor=pointer]:
+            - /url: /invoices
+            - img [ref=e1097]
+            - generic [ref=e1100]: الفواتير
+          - link "المدفوعات" [ref=e1101] [cursor=pointer]:
+            - /url: /payments
+            - img [ref=e1102]
+            - generic [ref=e1104]: المدفوعات
+          - link "الخزينة" [ref=e1105] [cursor=pointer]:
+            - /url: /finance/treasury
+            - img [ref=e1106]
+            - generic [ref=e1109]: الخزينة
+          - link "أسعار الصرف" [ref=e1110] [cursor=pointer]:
+            - /url: /finance/exchange-rates
+            - img [ref=e1111]
+            - generic [ref=e1113]: أسعار الصرف
+      - generic [ref=e1114]:
+        - paragraph [ref=e1115]: الأشخاص
+        - generic [ref=e1116]:
+          - link "العملاء" [ref=e1117] [cursor=pointer]:
+            - /url: /customers
+            - img [ref=e1118]
+            - generic [ref=e1123]: العملاء
+          - link "الوكلاء" [ref=e1124] [cursor=pointer]:
+            - /url: /agents
+            - img [ref=e1125]
+            - generic [ref=e1129]: الوكلاء
+      - generic [ref=e1130]:
+        - paragraph [ref=e1131]: الإعدادات
+        - generic [ref=e1132]:
+          - link "أسعار الشحن" [ref=e1133] [cursor=pointer]:
+            - /url: /shipping-rates
+            - img [ref=e1134]
+            - generic [ref=e1137]: أسعار الشحن
+          - link "الدول" [ref=e1138] [cursor=pointer]:
+            - /url: /settings/countries
+            - img [ref=e1139]
+            - generic [ref=e1142]: الدول
+          - link "المستخدمين" [ref=e1143] [cursor=pointer]:
+            - /url: /settings/users
+            - img [ref=e1144]
+            - generic [ref=e1146]: المستخدمين
+          - link "الإعدادات" [ref=e1147] [cursor=pointer]:
+            - /url: /settings
+            - img [ref=e1148]
+            - generic [ref=e1151]: الإعدادات
+          - link "سجل التدقيق" [ref=e1152] [cursor=pointer]:
+            - /url: /settings/audit-log
+            - img [ref=e1153]
+            - generic [ref=e1158]: سجل التدقيق
+          - link "التقارير" [ref=e1159] [cursor=pointer]:
+            - /url: /reports
+            - img [ref=e1160]
+            - generic [ref=e1162]: التقارير
+    - generic [ref=e1164]:
+      - generic [ref=e1165]: A
+      - generic [ref=e1166]:
+        - paragraph [ref=e1167]: Admin
+        - paragraph [ref=e1168]: admin@shipping.test
+  - generic [ref=e1169]:
+    - banner [ref=e1170]:
+      - generic [ref=e1171] [cursor=pointer]:
+        - img [ref=e1172]
+        - generic [ref=e1175]: البحث في الطلبات، الشحنات...
+        - generic [ref=e1176]: /
+      - generic [ref=e1177]:
+        - button "AR" [ref=e1178]:
+          - img [ref=e1179]
+          - generic [ref=e1182]: AR
+        - button "التبديل إلى light" [ref=e1183]:
+          - img [ref=e1184]
+        - button "الإشعارات" [ref=e1186]:
+          - img [ref=e1187]
+        - generic [ref=e1191]:
+          - generic [ref=e1192]:
+            - paragraph [ref=e1193]: Admin
+            - paragraph [ref=e1194]: admin
+          - generic [ref=e1195]: A
+          - button "تسجيل الخروج" [ref=e1196]:
+            - img [ref=e1197]
+    - main [ref=e1200]:
+      - generic [ref=e1201]:
+        - generic [ref=e1202]:
+          - generic [ref=e1203]:
+            - img [ref=e1205]
+            - generic [ref=e1208]:
+              - heading "الطلبات" [level=1] [ref=e1209]
+              - paragraph [ref=e1210]: لا توجد طلبات
+          - generic [ref=e1211]:
+            - button "عرض كانبان" [ref=e1212]:
+              - img
+            - link "إنشاء طلب" [ref=e1213] [cursor=pointer]:
+              - /url: /orders/create
+              - button "إنشاء طلب" [ref=e1214]:
+                - img
+                - text: إنشاء طلب
+        - generic [ref=e1216]:
+          - generic [ref=e1217]:
+            - img [ref=e1218]
+            - textbox "بحث..." [ref=e1221]
+          - combobox [ref=e1222]:
+            - generic: الحالة
+            - img
+          - combobox [ref=e1223]
+          - combobox [ref=e1224]:
+            - generic: العميل
+            - img
+          - combobox [ref=e1225]
+          - button "تصفية" [ref=e1226]
+        - table [ref=e1229]:
+          - rowgroup [ref=e1230]:
+            - row "رقم الطلب العميل تاريخ الإنشاء دولة المصدر / دولة الوجهة نوع الخدمة الحالة الوزن حالة الدفع الشحنة الإجراءات" [ref=e1231]:
+              - columnheader [ref=e1232]:
+                - checkbox [ref=e1233]
+              - columnheader "رقم الطلب" [ref=e1234] [cursor=pointer]:
+                - generic [ref=e1235]:
+                  - text: رقم الطلب
+                  - img [ref=e1236]
+              - columnheader "العميل" [ref=e1239] [cursor=pointer]:
+                - generic [ref=e1240]:
+                  - text: العميل
+                  - img [ref=e1241]
+              - columnheader "تاريخ الإنشاء" [ref=e1244] [cursor=pointer]:
+                - generic [ref=e1245]:
+                  - text: تاريخ الإنشاء
+                  - img [ref=e1246]
+              - columnheader "دولة المصدر / دولة الوجهة" [ref=e1249]
+              - columnheader "نوع الخدمة" [ref=e1250] [cursor=pointer]:
+                - generic [ref=e1251]:
+                  - text: نوع الخدمة
+                  - img [ref=e1252]
+              - columnheader "الحالة" [ref=e1255] [cursor=pointer]:
+                - generic [ref=e1256]:
+                  - text: الحالة
+                  - img [ref=e1257]
+              - columnheader "الوزن" [ref=e1260] [cursor=pointer]:
+                - generic [ref=e1261]:
+                  - text: الوزن
+                  - img [ref=e1262]
+              - columnheader "حالة الدفع" [ref=e1265]
+              - columnheader "الشحنة" [ref=e1266]
+              - columnheader "الإجراءات" [ref=e1267]
+          - rowgroup [ref=e1268]:
+            - row "ORD-20260316-0002 Ahmed Hassan 3/16/2026 → شحن 5.5 kg غير معين غير معين" [ref=e1269] [cursor=pointer]:
+              - cell [ref=e1270]:
+                - checkbox [ref=e1271]
+              - cell "ORD-20260316-0002" [ref=e1272]
+              - cell "Ahmed Hassan" [ref=e1273]
+              - cell "3/16/2026" [ref=e1274]
+              - cell "→" [ref=e1275]
+              - cell "شحن" [ref=e1276]
+              - cell [ref=e1277]:
+                - combobox [ref=e1278]:
+                  - generic [ref=e1279]: جديد
+                  - img
+              - cell "5.5 kg" [ref=e1280]
+              - cell "غير معين" [ref=e1281]
+              - cell "غير معين" [ref=e1282]
+              - cell [ref=e1283]:
+                - generic [ref=e1284]:
+                  - link [ref=e1285]:
+                    - /url: /orders/2
+                    - button [ref=e1286]:
+                      - img
+                  - link [ref=e1287]:
+                    - /url: /orders/2/edit
+                    - button [ref=e1288]:
+                      - img
+                  - button [ref=e1289]:
+                    - img
+            - row "ORD-20260313-0001 Ahmed Hassan 3/13/2026 → شحن 10.0 kg مدفوع غير معين" [ref=e1290] [cursor=pointer]:
+              - cell [ref=e1291]:
+                - checkbox [ref=e1292]
+              - cell "ORD-20260313-0001" [ref=e1293]
+              - cell "Ahmed Hassan" [ref=e1294]
+              - cell "3/13/2026" [ref=e1295]
+              - cell "→" [ref=e1296]
+              - cell "شحن" [ref=e1297]
+              - cell [ref=e1298]:
+                - combobox [ref=e1299]:
+                  - generic [ref=e1300]: جديد
+                  - img
+              - cell "10.0 kg" [ref=e1301]
+              - cell "مدفوع" [ref=e1302]
+              - cell "غير معين" [ref=e1303]
+              - cell [ref=e1304]:
+                - generic [ref=e1305]:
+                  - link [ref=e1306]:
+                    - /url: /orders/1
+                    - button [ref=e1307]:
+                      - img
+                  - link [ref=e1308]:
+                    - /url: /orders/1/edit
+                    - button [ref=e1309]:
+                      - img
+                  - button [ref=e1310]:
+                    - img
+        - generic [ref=e1311]:
+          - paragraph [ref=e1312]: عرض 2 من 2 نتائج
+          - generic [ref=e1313]:
+            - button "السابق" [disabled]:
+              - generic: السابق
+            - link "1" [ref=e1314] [cursor=pointer]:
+              - /url: http://localhost:8000/orders?page=1
+              - button "1" [ref=e1315]:
+                - generic [ref=e1316]: "1"
+            - button "التالي" [disabled]:
+              - generic: التالي
+  - region "Notifications alt+T"

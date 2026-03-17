@@ -1,0 +1,150 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - img [ref=e7]
+      - generic [ref=e10]:
+        - text: Performance
+        - generic [ref=e11]: Freight
+    - navigation [ref=e12]:
+      - generic [ref=e13]:
+        - paragraph [ref=e14]: Main
+        - link "Dashboard" [ref=e16] [cursor=pointer]:
+          - /url: /
+          - img [ref=e17]
+          - text: Dashboard
+      - generic [ref=e22]:
+        - paragraph [ref=e23]: Operations
+        - generic [ref=e24]:
+          - link "Orders" [ref=e25] [cursor=pointer]:
+            - /url: /orders
+            - img [ref=e26]
+            - text: Orders
+          - link "Shipments" [ref=e30] [cursor=pointer]:
+            - /url: /shipments
+            - img [ref=e31]
+            - text: Shipments
+          - link "Purchases" [ref=e35] [cursor=pointer]:
+            - /url: /purchases
+            - img [ref=e36]
+            - text: Purchases
+      - generic [ref=e40]:
+        - paragraph [ref=e41]: Finance
+        - generic [ref=e42]:
+          - link "Invoices" [ref=e43] [cursor=pointer]:
+            - /url: /invoices
+            - img [ref=e44]
+            - text: Invoices
+          - link "Payments" [ref=e47] [cursor=pointer]:
+            - /url: /payments
+            - img [ref=e48]
+            - text: Payments
+          - link "Treasury" [ref=e50] [cursor=pointer]:
+            - /url: /finance/treasury
+            - img [ref=e51]
+            - text: Treasury
+          - link "Exchange Rates" [ref=e54] [cursor=pointer]:
+            - /url: /finance/exchange-rates
+            - img [ref=e55]
+            - text: Exchange Rates
+      - generic [ref=e57]:
+        - paragraph [ref=e58]: People
+        - generic [ref=e59]:
+          - link "Customers" [ref=e60] [cursor=pointer]:
+            - /url: /customers
+            - img [ref=e61]
+            - text: Customers
+          - link "Agents" [ref=e67] [cursor=pointer]:
+            - /url: /agents
+            - img [ref=e68]
+            - text: Agents
+      - generic [ref=e72]:
+        - paragraph [ref=e73]: Settings
+        - generic [ref=e74]:
+          - link "Shipping Rates" [ref=e75] [cursor=pointer]:
+            - /url: /shipping-rates
+            - img [ref=e76]
+            - text: Shipping Rates
+          - link "Reports" [ref=e79] [cursor=pointer]:
+            - /url: /reports
+            - img [ref=e80]
+            - text: Reports
+    - generic [ref=e83]:
+      - generic [ref=e84]: A
+      - generic [ref=e85]:
+        - paragraph [ref=e86]: Admin
+        - paragraph [ref=e87]: admin@shipping.test
+  - generic [ref=e88]:
+    - banner [ref=e89]:
+      - generic [ref=e90] [cursor=pointer]:
+        - img [ref=e91]
+        - generic [ref=e94]: Search orders, shipments...
+        - generic [ref=e95]: /
+      - generic [ref=e96]:
+        - button "EN" [ref=e97]:
+          - img [ref=e98]
+          - generic [ref=e101]: EN
+        - button "Switch to light mode" [ref=e102]:
+          - img [ref=e103]
+        - button "Notifications" [ref=e105]:
+          - img [ref=e106]
+        - generic [ref=e110]:
+          - generic [ref=e111]:
+            - paragraph [ref=e112]: Admin
+            - paragraph [ref=e113]: admin
+          - generic [ref=e114]: A
+          - button "Sign out" [ref=e115]:
+            - img [ref=e116]
+    - main [ref=e119]:
+      - generic [ref=e120]:
+        - generic [ref=e121]:
+          - link [ref=e122] [cursor=pointer]:
+            - /url: /customers
+            - button [ref=e123]:
+              - img
+          - heading "Edit Customer" [level=1] [ref=e124]
+        - generic [ref=e125]:
+          - generic [ref=e127]: Customer Information
+          - generic [ref=e129]:
+            - generic [ref=e130]:
+              - generic [ref=e131]:
+                - generic [ref=e132]: Name *
+                - textbox "Name *" [ref=e133]:
+                  - /placeholder: Customer name
+                  - text: Test Cust 1773366095649
+              - generic [ref=e134]:
+                - generic [ref=e135]: Phone *
+                - generic [ref=e136]:
+                  - combobox "Country selector" [ref=e138] [cursor=pointer]
+                  - textbox [ref=e141]: +20 123456789
+            - generic [ref=e142]:
+              - generic [ref=e143]: Email
+              - textbox "Email" [ref=e144]:
+                - /placeholder: customer@example.com
+            - generic [ref=e145]:
+              - generic [ref=e146]: Address
+              - textbox "Address" [ref=e147]:
+                - /placeholder: Street address
+            - generic [ref=e148]:
+              - generic [ref=e149]:
+                - generic [ref=e150]: Country *
+                - button "Country *" [ref=e152]:
+                  - generic [ref=e153]:
+                    - img "Egypt" [ref=e154]
+                    - text: Egypt
+                  - img [ref=e155]
+              - generic [ref=e157]:
+                - generic [ref=e158]: Rating *
+                - combobox [ref=e159]:
+                  - generic: VIP
+                  - img
+                - combobox [ref=e160]
+            - generic [ref=e161]:
+              - generic [ref=e162]: Notes
+              - textbox "Notes" [ref=e163]:
+                - /placeholder: Additional notes
+            - generic [ref=e164]:
+              - button "Update Customer" [ref=e165]
+              - link "Cancel" [ref=e166] [cursor=pointer]:
+                - /url: /customers
+                - button "Cancel" [ref=e167]
+  - region "Notifications alt+T"

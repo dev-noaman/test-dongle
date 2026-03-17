@@ -1,0 +1,247 @@
+- generic [ref=e68]:
+  - complementary [ref=e69]:
+    - generic [ref=e70]:
+      - img [ref=e72]
+      - generic [ref=e75]:
+        - text: Performance
+        - generic [ref=e76]: Freight
+    - navigation [ref=e77]:
+      - generic [ref=e78]:
+        - paragraph [ref=e79]: Main
+        - link "Dashboard" [ref=e81] [cursor=pointer]:
+          - /url: /
+          - img [ref=e82]
+          - text: Dashboard
+      - generic [ref=e87]:
+        - paragraph [ref=e88]: Operations
+        - generic [ref=e89]:
+          - link "Orders" [ref=e90] [cursor=pointer]:
+            - /url: /orders
+            - img [ref=e91]
+            - text: Orders
+          - link "Shipments" [ref=e95] [cursor=pointer]:
+            - /url: /shipments
+            - img [ref=e96]
+            - text: Shipments
+          - link "Purchases" [ref=e100] [cursor=pointer]:
+            - /url: /purchases
+            - img [ref=e101]
+            - text: Purchases
+      - generic [ref=e105]:
+        - paragraph [ref=e106]: Finance
+        - generic [ref=e107]:
+          - link "Invoices" [ref=e108] [cursor=pointer]:
+            - /url: /invoices
+            - img [ref=e109]
+            - text: Invoices
+          - link "Payments" [ref=e112] [cursor=pointer]:
+            - /url: /payments
+            - img [ref=e113]
+            - text: Payments
+          - link "Treasury" [ref=e115] [cursor=pointer]:
+            - /url: /finance/treasury
+            - img [ref=e116]
+            - text: Treasury
+          - link "Exchange Rates" [ref=e119] [cursor=pointer]:
+            - /url: /finance/exchange-rates
+            - img [ref=e120]
+            - text: Exchange Rates
+      - generic [ref=e122]:
+        - paragraph [ref=e123]: People
+        - generic [ref=e124]:
+          - link "Customers" [ref=e125] [cursor=pointer]:
+            - /url: /customers
+            - img [ref=e126]
+            - text: Customers
+          - link "Agents" [ref=e132] [cursor=pointer]:
+            - /url: /agents
+            - img [ref=e133]
+            - text: Agents
+      - generic [ref=e137]:
+        - paragraph [ref=e138]: Settings
+        - generic [ref=e139]:
+          - link "Shipping Rates" [ref=e140] [cursor=pointer]:
+            - /url: /shipping-rates
+            - img [ref=e141]
+            - text: Shipping Rates
+          - link "Reports" [ref=e144] [cursor=pointer]:
+            - /url: /reports
+            - img [ref=e145]
+            - text: Reports
+    - generic [ref=e148]:
+      - generic [ref=e149]: A
+      - generic [ref=e150]:
+        - paragraph [ref=e151]: Admin
+        - paragraph [ref=e152]: admin@shipping.test
+  - generic [ref=e153]:
+    - banner [ref=e154]:
+      - generic [ref=e155] [cursor=pointer]:
+        - img [ref=e156]
+        - generic [ref=e159]: Search orders, shipments...
+        - generic [ref=e160]: /
+      - generic [ref=e161]:
+        - button "EN" [ref=e162]:
+          - img [ref=e163]
+          - generic [ref=e166]: EN
+        - button "Switch to light mode" [ref=e167]:
+          - img [ref=e168]
+        - button "Notifications" [ref=e170]:
+          - img [ref=e171]
+        - generic [ref=e175]:
+          - generic [ref=e176]:
+            - paragraph [ref=e177]: Admin
+            - paragraph [ref=e178]: admin
+          - generic [ref=e179]: A
+          - button "Sign out" [ref=e180]:
+            - img [ref=e181]
+    - main [ref=e184]:
+      - generic [ref=e185]:
+        - generic [ref=e186]:
+          - link [ref=e187] [cursor=pointer]:
+            - /url: /customers
+            - button [ref=e188]:
+              - img
+          - heading "Edit Customer" [level=1] [ref=e189]
+        - generic [ref=e190]:
+          - generic [ref=e192]: Customer Information
+          - generic [ref=e194]:
+            - generic [ref=e195]:
+              - generic [ref=e196]:
+                - generic [ref=e197]: Name *
+                - textbox "Name *" [ref=e198]:
+                  - /placeholder: Customer name
+                  - text: Test Cust 1773366095649
+              - generic [ref=e199]:
+                - generic [ref=e200]: Phone *
+                - generic [ref=e201]:
+                  - combobox "Country selector" [ref=e203] [cursor=pointer]
+                  - textbox [ref=e206]: +20 123456789
+            - generic [ref=e207]:
+              - generic [ref=e208]: Email
+              - textbox "Email" [ref=e209]:
+                - /placeholder: customer@example.com
+            - generic [ref=e210]:
+              - generic [ref=e211]: Address
+              - textbox "Address" [ref=e212]:
+                - /placeholder: Street address
+            - generic [ref=e213]:
+              - generic [ref=e214]:
+                - generic [ref=e215]: Country *
+                - generic [ref=e216]:
+                  - button "Country *" [expanded] [ref=e217]:
+                    - generic [ref=e218]:
+                      - img "Egypt" [ref=e219]: 🇪🇬
+                      - text: Egypt
+                    - img [ref=e220]
+                  - generic [ref=e233]:
+                    - textbox "Search countries..." [active] [ref=e235]
+                    - generic [ref=e236]:
+                      - option "Egypt Egypt" [selected] [ref=e237]:
+                        - generic [ref=e238]:
+                          - img "Egypt" [ref=e239]: 🇪🇬
+                          - text: Egypt
+                        - img [ref=e240]
+                      - option "Qatar Qatar" [ref=e242]:
+                        - generic [ref=e243]:
+                          - img "Qatar" [ref=e244]: 🇶🇦
+                          - text: Qatar
+                      - option "Saudi Arabia Saudi Arabia" [ref=e245]:
+                        - generic [ref=e246]:
+                          - img "Saudi Arabia" [ref=e247]: 🇸🇦
+                          - text: Saudi Arabia
+                      - option "United Arab Emirates United Arab Emirates" [ref=e248]:
+                        - generic [ref=e249]:
+                          - img "United Arab Emirates" [ref=e250]: 🇦🇪
+                          - text: United Arab Emirates
+                      - option "Kuwait Kuwait" [ref=e251]:
+                        - generic [ref=e252]:
+                          - img "Kuwait" [ref=e253]: 🇰🇼
+                          - text: Kuwait
+                      - option "Bahrain Bahrain" [ref=e254]:
+                        - generic [ref=e255]:
+                          - img "Bahrain" [ref=e256]: 🇧🇭
+                          - text: Bahrain
+                      - option "Oman Oman" [ref=e257]:
+                        - generic [ref=e258]:
+                          - img "Oman" [ref=e259]: 🇴🇲
+                          - text: Oman
+                      - option "Jordan Jordan" [ref=e260]:
+                        - generic [ref=e261]:
+                          - img "Jordan" [ref=e262]: 🇯🇴
+                          - text: Jordan
+                      - option "Lebanon Lebanon" [ref=e263]:
+                        - generic [ref=e264]:
+                          - img "Lebanon" [ref=e265]: 🇱🇧
+                          - text: Lebanon
+                      - option "Iraq Iraq" [ref=e266]:
+                        - generic [ref=e267]:
+                          - img "Iraq" [ref=e268]: 🇮🇶
+                          - text: Iraq
+                      - option "Turkey Turkey" [ref=e269]:
+                        - generic [ref=e270]:
+                          - img "Turkey" [ref=e271]: 🇹🇷
+                          - text: Turkey
+                      - option "United States United States" [ref=e272]:
+                        - generic [ref=e273]:
+                          - img "United States" [ref=e274]: 🇺🇸
+                          - text: United States
+                      - option "United Kingdom United Kingdom" [ref=e275]:
+                        - generic [ref=e276]:
+                          - img "United Kingdom" [ref=e277]: 🇬🇧
+                          - text: United Kingdom
+                      - option "Germany Germany" [ref=e278]:
+                        - generic [ref=e279]:
+                          - img "Germany" [ref=e280]: 🇩🇪
+                          - text: Germany
+                      - option "France France" [ref=e281]:
+                        - generic [ref=e282]:
+                          - img "France" [ref=e283]: 🇫🇷
+                          - text: France
+                      - option "Italy Italy" [ref=e284]:
+                        - generic [ref=e285]:
+                          - img "Italy" [ref=e286]: 🇮🇹
+                          - text: Italy
+                      - option "Spain Spain" [ref=e287]:
+                        - generic [ref=e288]:
+                          - img "Spain" [ref=e289]: 🇪🇸
+                          - text: Spain
+                      - option "Canada Canada" [ref=e290]:
+                        - generic [ref=e291]:
+                          - img "Canada" [ref=e292]: 🇨🇦
+                          - text: Canada
+                      - option "Australia Australia" [ref=e293]:
+                        - generic [ref=e294]:
+                          - img "Australia" [ref=e295]: 🇦🇺
+                          - text: Australia
+                      - option "China China" [ref=e296]:
+                        - generic [ref=e297]:
+                          - img "China" [ref=e298]: 🇨🇳
+                          - text: China
+                      - option "India India" [ref=e299]:
+                        - generic [ref=e300]:
+                          - img "India" [ref=e301]: 🇮🇳
+                          - text: India
+                      - option "Pakistan Pakistan" [ref=e302]:
+                        - generic [ref=e303]:
+                          - img "Pakistan" [ref=e304]: 🇵🇰
+                          - text: Pakistan
+                      - option "Bangladesh Bangladesh" [ref=e305]:
+                        - generic [ref=e306]:
+                          - img "Bangladesh" [ref=e307]: 🇧🇩
+                          - text: Bangladesh
+              - generic [ref=e222]:
+                - generic [ref=e223]: Rating *
+                - combobox [ref=e224]:
+                  - generic: VIP
+                  - img
+                - combobox [ref=e225]
+            - generic [ref=e226]:
+              - generic [ref=e227]: Notes
+              - textbox "Notes" [ref=e228]:
+                - /placeholder: Additional notes
+            - generic [ref=e229]:
+              - button "Update Customer" [ref=e230]
+              - link "Cancel" [ref=e231] [cursor=pointer]:
+                - /url: /customers
+                - button "Cancel" [ref=e232]
+  - region "Notifications alt+T"

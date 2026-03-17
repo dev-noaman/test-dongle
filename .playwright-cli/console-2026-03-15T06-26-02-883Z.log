@@ -1,0 +1,4 @@
+[   11094ms] [ERROR] Failed to load resource: the server responded with a status of 419 (unknown status) @ http://localhost:9999/locale:0
+[   30872ms] [ERROR] Failed to load resource: the server responded with a status of 419 (unknown status) @ http://localhost:9999/locale:0
+[   52876ms] [ERROR] Failed to load resource: the server responded with a status of 419 (unknown status) @ http://localhost:9999/locale:0
+[   81076ms] [ERROR] Failed to load resource: the server responded with a status of 419 (unknown status) @ http://localhost:9999/locale:0
