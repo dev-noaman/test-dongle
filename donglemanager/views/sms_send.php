@@ -4,68 +4,52 @@
  *
  * Form to compose and send SMS messages via a specific dongle.
  */
-
-$module = \FreePBX::Donglemanager();
-$dongles = $module->getActiveDongles();
 ?>
 <div class="dm-container">
     <div class="dm-page-header">
         <h2><i class="fa fa-paper-plane"></i> Send SMS</h2>
     </div>
 
-    <?php if (empty($dongles)): ?>
-        <div class="alert alert-warning">
-            <i class="fa fa-exclamation-triangle"></i>
-            <strong>No Active Dongles</strong> - There are no dongles currently available to send SMS.
-            Please check the <a href="?display=donglemanager&view=dongles">Dongles</a> page.
-        </div>
-    <?php else: ?>
-        <div class="dm-sms-form">
-            <form id="sms-send-form">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="dongle">Select Dongle</label>
-                            <select name="dongle" id="dongle" class="form-control" required>
-                                <option value="">-- Select Dongle --</option>
-                                <?php foreach ($dongles as $d): ?>
-                                    <option value="<?php echo htmlspecialchars($d['device']); ?>">
-                                        <?php echo htmlspecialchars($d['device']); ?>
-                                        <?php if ($d['phone_number']): ?>
-                                            — <?php echo htmlspecialchars($d['phone_number']); ?>
-                                        <?php endif; ?>
-                                        <?php if ($d['operator']): ?>
-                                            (<?php echo htmlspecialchars($d['operator']); ?>)
-                                        <?php endif; ?>
-                                    </option>
-                                <?php endforeach; ?>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="destination">Destination Number</label>
-                            <input type="text" name="destination" id="destination" class="form-control"
-                                   placeholder="+1234567890" maxlength="30" required>
-                        </div>
+    <div id="no-dongles-warning" class="alert alert-warning" style="display:none;">
+        <i class="fa fa-exclamation-triangle"></i>
+        <strong>No Active Dongles</strong> - There are no dongles currently available to send SMS.
+        Please check the <a href="?display=donglemanager&view=dongles">Dongles</a> page.
+    </div>
+
+    <div class="dm-sms-form">
+        <form id="sms-send-form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="dongle">Select Dongle</label>
+                        <select name="dongle" id="dongle" class="form-control dm-dongle-active-filter" required>
+                            <option value="">-- Select Dongle --</option>
+                        </select>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" class="form-control" rows="4"
-                              maxlength="459" required placeholder="Enter your message here..."></textarea>
-                    <div class="dm-sms-counter" id="sms-counter">0 / 160 characters (0 SMS parts, GSM-7)</div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="destination">Destination Number</label>
+                        <input type="text" name="destination" id="destination" class="form-control"
+                               placeholder="+1234567890" maxlength="30" required>
+                    </div>
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <button type="submit" class="dm-btn dm-btn-primary">
-                        <i class="fa fa-paper-plane"></i> Send SMS
-                    </button>
-                </div>
-            </form>
-        </div>
-    <?php endif; ?>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message" class="form-control" rows="4"
+                          maxlength="459" required placeholder="Enter your message here..."></textarea>
+                <div class="dm-sms-counter" id="sms-counter">0 / 160 characters (0 SMS parts, GSM-7)</div>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="dm-btn dm-btn-primary">
+                    <i class="fa fa-paper-plane"></i> Send SMS
+                </button>
+            </div>
+        </form>
+    </div>
 
     <div class="dm-card" style="margin-top: 30px;">
         <div class="dm-card-header">
@@ -160,6 +144,14 @@ $dongles = $module->getActiveDongles();
 
     // Load on page ready
     $(document).ready(function() {
+        DM.fetchDongles(function(dongles) {
+            var active = dongles.filter(function(d) { return d.state === 'Free' || d.state === 'Busy'; });
+            if (active.length === 0) {
+                $('#no-dongles-warning').show();
+                $('#sms-send-form').hide();
+            }
+            DM.populateDongleSelectors(dongles);
+        });
         loadRecentSent();
     });
 

@@ -5,9 +5,6 @@
  * SMS traffic reports with filters, summary cards, charts, and stats table.
  */
 
-$module = \FreePBX::Donglemanager();
-$dongles = $module->getAllDongles();
-
 // Default date range: last 7 days
 $defaultDateFrom = date('Y-m-d', strtotime('-7 days'));
 $defaultDateTo = date('Y-m-d');
@@ -29,13 +26,8 @@ $defaultDateTo = date('Y-m-d');
         </div>
         <div class="dm-filter-group">
             <label>Dongle</label>
-            <select id="filter-dongle">
+            <select id="filter-dongle" class="dm-dongle-filter">
                 <option value="all">All Dongles</option>
-                <?php foreach ($dongles as $d): ?>
-                    <option value="<?php echo htmlspecialchars($d['device']); ?>">
-                        <?php echo htmlspecialchars($d['device']); ?>
-                    </option>
-                <?php endforeach; ?>
             </select>
         </div>
         <div class="dm-filter-group">

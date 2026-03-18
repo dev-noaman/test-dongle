@@ -124,6 +124,11 @@ if (file_exists($viewFile)) {
 
     // Initialize AJAX navigation
     $(document).ready(function() {
+        // Pre-fetch dongle list into cache
+        DM.fetchDongles(function(dongles) {
+            DM.populateDongleSelectors(dongles);
+        });
+
         // Use event delegation for nav links
         $('#dm-main-nav').on('click', 'a[data-view]', function(e) {
             var targetView = $(this).data('view');
@@ -209,6 +214,15 @@ if (file_exists($viewFile)) {
             // Initialize dashboard if that's the view
             if (view === 'dashboard' && typeof DM.initDashboard === 'function') {
                 DM.initDashboard();
+            }
+
+            // Populate dongle selectors in the newly loaded view
+            if (DM.dongleCache !== null) {
+                DM.populateDongleSelectors(DM.dongleCache);
+            } else {
+                DM.fetchDongles(function(dongles) {
+                    DM.populateDongleSelectors(dongles);
+                });
             }
         })
         .fail(function(xhr, status, error) {

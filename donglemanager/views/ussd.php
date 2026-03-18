@@ -4,9 +4,6 @@
  *
  * Send USSD commands with quick buttons, poll for response, display history.
  */
-
-$module = \FreePBX::Donglemanager();
-$dongles = $module->getActiveDongles();
 ?>
 <div class="dm-container">
     <div class="dm-page-header">
@@ -15,62 +12,52 @@ $dongles = $module->getActiveDongles();
 
     <div class="row">
         <div class="col-md-6">
-            <?php if (empty($dongles)): ?>
-                <div class="alert alert-warning">
-                    <i class="fa fa-exclamation-triangle"></i>
-                    <strong>No Active Dongles</strong> - There are no dongles currently available.
+            <div id="no-dongles-warning" class="alert alert-warning" style="display:none;">
+                <i class="fa fa-exclamation-triangle"></i>
+                <strong>No Active Dongles</strong> - There are no dongles currently available.
+            </div>
+
+            <div class="dm-card" id="ussd-form-card">
+                <div class="dm-card-header">
+                    <i class="fa fa-paper-plane"></i> Send USSD
                 </div>
-            <?php else: ?>
-                <div class="dm-card">
-                    <div class="dm-card-header">
-                        <i class="fa fa-paper-plane"></i> Send USSD
-                    </div>
-                    <div class="dm-card-body">
-                        <form id="ussd-send-form">
-                            <div class="form-group">
-                                <label for="dongle">Select Dongle</label>
-                                <select name="dongle" id="ussd-dongle" class="form-control" required>
-                                    <option value="">-- Select Dongle --</option>
-                                    <?php foreach ($dongles as $d): ?>
-                                        <option value="<?php echo htmlspecialchars($d['device']); ?>">
-                                            <?php echo htmlspecialchars($d['device']); ?>
-                                            <?php if ($d['operator']): ?>
-                                                (<?php echo htmlspecialchars($d['operator']); ?>)
-                                            <?php endif; ?>
-                                        </option>
-                                    <?php endforeach; ?>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="ussd_command">USSD Code</label>
-                                <input type="text" name="ussd_command" id="ussd_command" class="form-control"
-                                       placeholder="*100#" maxlength="255" required>
-                                <div class="dm-ussd-quick-buttons">
-                                    <button type="button" class="dm-btn dm-btn-outline dm-btn-sm quick-ussd" data-code="*100#">*100#</button>
-                                    <button type="button" class="dm-btn dm-btn-outline dm-btn-sm quick-ussd" data-code="*101#">*101#</button>
-                                    <button type="button" class="dm-btn dm-btn-outline dm-btn-sm quick-ussd" data-code="*102#">*102#</button>
-                                    <button type="button" class="dm-btn dm-btn-outline dm-btn-sm quick-ussd" data-code="*111#">*111#</button>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <button type="submit" class="dm-btn dm-btn-primary" id="ussd-submit-btn">
-                                    <i class="fa fa-paper-plane"></i> Send
-                                </button>
-                                <span id="ussd-spinner" style="display:none; margin-left:10px;">
-                                    <i class="fa fa-spinner fa-spin"></i> Waiting for response...
-                                </span>
-                            </div>
-                        </form>
-
-                        <div id="ussd-response-area" style="display:none;">
-                            <label>Response:</label>
-                            <div class="dm-ussd-response" id="ussd-response-text"></div>
+                <div class="dm-card-body">
+                    <form id="ussd-send-form">
+                        <div class="form-group">
+                            <label for="dongle">Select Dongle</label>
+                            <select name="dongle" id="ussd-dongle" class="form-control dm-dongle-active-filter" required>
+                                <option value="">-- Select Dongle --</option>
+                            </select>
                         </div>
+
+                        <div class="form-group">
+                            <label for="ussd_command">USSD Code</label>
+                            <input type="text" name="ussd_command" id="ussd_command" class="form-control"
+                                   placeholder="*100#" maxlength="255" required>
+                            <div class="dm-ussd-quick-buttons">
+                                <button type="button" class="dm-btn dm-btn-outline dm-btn-sm quick-ussd" data-code="*100#">*100#</button>
+                                <button type="button" class="dm-btn dm-btn-outline dm-btn-sm quick-ussd" data-code="*101#">*101#</button>
+                                <button type="button" class="dm-btn dm-btn-outline dm-btn-sm quick-ussd" data-code="*102#">*102#</button>
+                                <button type="button" class="dm-btn dm-btn-outline dm-btn-sm quick-ussd" data-code="*111#">*111#</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="dm-btn dm-btn-primary" id="ussd-submit-btn">
+                                <i class="fa fa-paper-plane"></i> Send
+                            </button>
+                            <span id="ussd-spinner" style="display:none; margin-left:10px;">
+                                <i class="fa fa-spinner fa-spin"></i> Waiting for response...
+                            </span>
+                        </div>
+                    </form>
+
+                    <div id="ussd-response-area" style="display:none;">
+                        <label>Response:</label>
+                        <div class="dm-ussd-response" id="ussd-response-text"></div>
                     </div>
                 </div>
-            <?php endif; ?>
+            </div>
         </div>
 
         <div class="col-md-6">
@@ -217,6 +204,14 @@ $dongles = $module->getActiveDongles();
     });
 
     $(document).ready(function() {
+        DM.fetchDongles(function(dongles) {
+            var active = dongles.filter(function(d) { return d.state === 'Free' || d.state === 'Busy'; });
+            if (active.length === 0) {
+                $('#no-dongles-warning').show();
+                $('#ussd-form-card').hide();
+            }
+            DM.populateDongleSelectors(dongles);
+        });
         loadUssdHistory();
     });
 

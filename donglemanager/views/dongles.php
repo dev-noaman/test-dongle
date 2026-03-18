@@ -149,6 +149,7 @@ $module = \FreePBX::Donglemanager();
             $btn.prop('disabled', false);
             if (response.success) {
                 DM.toast(response.message, 'success');
+                DM.invalidateDongleCache();
                 setTimeout(loadDongles, 2000);
             } else {
                 DM.toast(response.message, 'error');
@@ -166,6 +167,7 @@ $module = \FreePBX::Donglemanager();
             $btn.prop('disabled', false);
             if (response.success) {
                 DM.toast(response.message, 'success');
+                DM.invalidateDongleCache();
                 setTimeout(loadDongles, 1000);
             } else {
                 DM.toast(response.message, 'error');
@@ -182,6 +184,7 @@ $module = \FreePBX::Donglemanager();
             $btn.prop('disabled', false);
             if (response.success) {
                 DM.toast(response.message, 'success');
+                DM.invalidateDongleCache();
                 setTimeout(loadDongles, 1000);
             } else {
                 DM.toast(response.message, 'error');

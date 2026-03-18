@@ -4,9 +4,6 @@
  *
  * Paginated outbox with status filters, retry, delete, and row expansion.
  */
-
-$module = \FreePBX::Donglemanager();
-$dongles = $module->getAllDongles();
 ?>
 <div class="dm-container">
     <div class="dm-page-header">
@@ -17,13 +14,8 @@ $dongles = $module->getAllDongles();
     <div class="dm-filter-bar">
         <div class="dm-filter-group">
             <label>Dongle</label>
-            <select id="filter-dongle">
+            <select id="filter-dongle" class="dm-dongle-filter">
                 <option value="all">All Dongles</option>
-                <?php foreach ($dongles as $d): ?>
-                    <option value="<?php echo htmlspecialchars($d['device']); ?>">
-                        <?php echo htmlspecialchars($d['device']); ?>
-                    </option>
-                <?php endforeach; ?>
             </select>
         </div>
         <div class="dm-filter-group">

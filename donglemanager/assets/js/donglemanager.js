@@ -733,6 +733,76 @@ var DM = DM || {};
     };
 
     // ============================================
+    // Dongle List Cache
+    // ============================================
+
+    DM.dongleCache = null;
+
+    /**
+     * Fetch and cache dongle list. Returns cached data on subsequent calls.
+     *
+     * @param {function} callback - Receives array of dongle objects
+     */
+    DM.fetchDongles = function(callback) {
+        if (DM.dongleCache !== null) {
+            if (typeof callback === 'function') callback(DM.dongleCache);
+            return;
+        }
+
+        DM.ajax('dongle_list', {}, function(response) {
+            if (response.success) {
+                DM.dongleCache = response.data;
+            } else {
+                DM.dongleCache = [];
+            }
+            if (typeof callback === 'function') callback(DM.dongleCache);
+        });
+    };
+
+    /**
+     * Invalidate dongle cache (call after dongle start/stop/restart)
+     */
+    DM.invalidateDongleCache = function() {
+        DM.dongleCache = null;
+    };
+
+    /**
+     * Populate all dongle filter <select> elements on the current view.
+     * Targets selects with class "dm-dongle-filter" or "dm-dongle-active-filter".
+     *
+     * @param {array} dongles - Array of dongle objects
+     */
+    DM.populateDongleSelectors = function(dongles) {
+        // Filter selectors (show all dongles, with "All Dongles" option)
+        $('.dm-dongle-filter').each(function() {
+            var $select = $(this);
+            var current = $select.val();
+            $select.find('option:not(:first)').remove(); // Keep "All Dongles"
+            dongles.forEach(function(d) {
+                $select.append('<option value="' + DM.escapeHtml(d.device) + '">' +
+                    DM.escapeHtml(d.device) + '</option>');
+            });
+            if (current) $select.val(current);
+        });
+
+        // Active-only selectors (for send forms — only Free/Busy dongles)
+        $('.dm-dongle-active-filter').each(function() {
+            var $select = $(this);
+            var current = $select.val();
+            $select.find('option:not(:first)').remove();
+            dongles.forEach(function(d) {
+                if (d.state !== 'Free' && d.state !== 'Busy') return;
+                var label = d.device;
+                if (d.phone_number) label += ' \u2014 ' + d.phone_number;
+                if (d.operator) label += ' (' + d.operator + ')';
+                $select.append('<option value="' + DM.escapeHtml(d.device) + '">' +
+                    DM.escapeHtml(label) + '</option>');
+            });
+            if (current) $select.val(current);
+        });
+    };
+
+    // ============================================
     // Initialize on DOM Ready
     // ============================================
 
