@@ -1041,18 +1041,18 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
                 LEFT JOIN (
                     SELECT dongle, COUNT(*) as sent_count
                     FROM donglemanager_sms_outbox
-                    WHERE DATE(created_at) BETWEEN ? AND ?
+                    WHERE created_at >= ? AND created_at <= ?
                     GROUP BY dongle
                 ) s ON d.device = s.dongle
                 LEFT JOIN (
                     SELECT dongle, COUNT(*) as received_count
                     FROM donglemanager_sms_inbox
-                    WHERE DATE(received_at) BETWEEN ? AND ?
+                    WHERE received_at >= ? AND received_at <= ?
                     GROUP BY dongle
                 ) r ON d.device = r.dongle
                 ORDER BY d.device";
         $stmt = $this->db->prepare($sql);
-        $stmt->execute([$dateFrom, $dateTo, $dateFrom, $dateTo]);
+        $stmt->execute([$dateFrom . ' 00:00:00', $dateTo . ' 23:59:59', $dateFrom . ' 00:00:00', $dateTo . ' 23:59:59']);
         $dongleRows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         $perDongle = [];
