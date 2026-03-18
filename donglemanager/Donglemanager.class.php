@@ -1175,21 +1175,18 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
 
         $stmt = $this->db->prepare($sql);
         $stmt->execute($params);
-        $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        // Output CSV
+        // Stream CSV directly — never buffer entire result set
         header('Content-Type: text/csv');
         header('Content-Disposition: attachment; filename="donglemanager_logs_' . date('Y-m-d_His') . '.csv"');
 
         $output = fopen('php://output', 'w');
 
         // Header row
-        if (!empty($rows)) {
-            fputcsv($output, array_keys($rows[0]));
-        }
+        fputcsv($output, ['Time', 'Level', 'Category', 'Dongle', 'Message']);
 
-        // Data rows
-        foreach ($rows as $row) {
+        // Stream rows one at a time
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
             fputcsv($output, $row);
         }
 
