@@ -398,7 +398,7 @@ var DM = DM || {};
                       ' characters (' + parts + ' SMS parts, ' + (isGsm7 ? 'GSM-7' : 'UCS-2') + ')');
         }
 
-        $textarea.on('input keyup', updateCounter);
+        $textarea.on('input', updateCounter);
         updateCounter();
     };
 
