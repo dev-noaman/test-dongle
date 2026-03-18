@@ -129,6 +129,22 @@ function donglemanager_install() {
         }
     }
 
+    // Add composite indexes for query performance (idempotent)
+    $indexes = [
+        "ALTER TABLE donglemanager_sms_inbox ADD INDEX idx_dongle_received (dongle, received_at)",
+        "ALTER TABLE donglemanager_sms_outbox ADD INDEX idx_dongle_created (dongle, created_at)",
+        "ALTER TABLE donglemanager_sms_outbox ADD INDEX idx_status_created (status, created_at)",
+        "ALTER TABLE donglemanager_logs ADD INDEX idx_created_level (created_at, level)",
+    ];
+
+    foreach ($indexes as $sql) {
+        try {
+            $db->query($sql);
+        } catch (Exception $e) {
+            // Index may already exist — ignore duplicate key errors
+        }
+    }
+
     // Log successful installation
     outn(_("Creating Dongle Manager tables..."));
     out(_("done"));
