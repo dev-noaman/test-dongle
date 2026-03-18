@@ -424,7 +424,16 @@ var DM = DM || {};
         var ctx = document.getElementById(canvasId);
         if (!ctx) return;
 
-        // Destroy existing chart instance
+        // If chart already exists on same canvas, update data instead of destroying
+        if (DM.dashboardChart && DM.dashboardChart.canvas === ctx) {
+            DM.dashboardChart.data.labels = chartData.labels || [];
+            DM.dashboardChart.data.datasets[0].data = chartData.sent || [];
+            DM.dashboardChart.data.datasets[1].data = chartData.received || [];
+            DM.dashboardChart.update('none'); // 'none' = no animation on data update
+            return;
+        }
+
+        // Destroy stale chart if canvas changed (e.g., AJAX navigation)
         if (DM.dashboardChart) {
             DM.dashboardChart.destroy();
         }
