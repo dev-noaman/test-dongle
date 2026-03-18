@@ -419,12 +419,12 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
             $params[] = '%' . $_GET['search'] . '%';
         }
         if (!empty($_GET['date_from'])) {
-            $where .= ' AND DATE(created_at) >= ?';
-            $params[] = $_GET['date_from'];
+            $where .= ' AND created_at >= ?';
+            $params[] = $_GET['date_from'] . ' 00:00:00';
         }
         if (!empty($_GET['date_to'])) {
-            $where .= ' AND DATE(created_at) <= ?';
-            $params[] = $_GET['date_to'];
+            $where .= ' AND created_at <= ?';
+            $params[] = $_GET['date_to'] . ' 23:59:59';
         }
 
         return [$where, $params];
@@ -507,12 +507,12 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
         $data['dongles_active'] = (int)($dongleStats['active'] ?? 0);
         $data['dongles_offline'] = (int)($dongleStats['offline'] ?? 0);
 
-        // SMS stats for today
+        // SMS stats for today (index-friendly)
         $stmt = $this->db->query("
             SELECT
-                (SELECT COUNT(*) FROM donglemanager_sms_outbox WHERE DATE(created_at) = CURDATE()) as sent,
-                (SELECT COUNT(*) FROM donglemanager_sms_outbox WHERE DATE(created_at) = CURDATE() AND status = 'failed') as failed,
-                (SELECT COUNT(*) FROM donglemanager_sms_inbox WHERE DATE(received_at) = CURDATE()) as received
+                (SELECT COUNT(*) FROM donglemanager_sms_outbox WHERE created_at >= CURDATE()) as sent,
+                (SELECT COUNT(*) FROM donglemanager_sms_outbox WHERE created_at >= CURDATE() AND status = 'failed') as failed,
+                (SELECT COUNT(*) FROM donglemanager_sms_inbox WHERE received_at >= CURDATE()) as received
         ");
         $smsStats = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -596,12 +596,12 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
             $params[] = $searchTerm;
         }
         if (!empty($_GET['date_from'])) {
-            $where .= ' AND DATE(received_at) >= ?';
-            $params[] = $_GET['date_from'];
+            $where .= ' AND received_at >= ?';
+            $params[] = $_GET['date_from'] . ' 00:00:00';
         }
         if (!empty($_GET['date_to'])) {
-            $where .= ' AND DATE(received_at) <= ?';
-            $params[] = $_GET['date_to'];
+            $where .= ' AND received_at <= ?';
+            $params[] = $_GET['date_to'] . ' 23:59:59';
         }
 
         // Count total
@@ -647,12 +647,12 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
             $params[] = $searchTerm;
         }
         if (!empty($_GET['date_from'])) {
-            $where .= ' AND DATE(created_at) >= ?';
-            $params[] = $_GET['date_from'];
+            $where .= ' AND created_at >= ?';
+            $params[] = $_GET['date_from'] . ' 00:00:00';
         }
         if (!empty($_GET['date_to'])) {
-            $where .= ' AND DATE(created_at) <= ?';
-            $params[] = $_GET['date_to'];
+            $where .= ' AND created_at <= ?';
+            $params[] = $_GET['date_to'] . ' 23:59:59';
         }
 
         // Count total
@@ -954,20 +954,20 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
         }
 
         $dongleFilter = $dongle !== 'all' ? ' AND dongle = ?' : '';
-        $baseParams = [$dateFrom, $dateTo];
+        $baseParams = [$dateFrom . ' 00:00:00', $dateTo . ' 23:59:59'];
         if ($dongle !== 'all') $baseParams[] = $dongle;
 
-        // Get sent + failed counts in one query
+        // Get sent + failed counts in one query (index-friendly)
         $sql = "SELECT COUNT(*) as total, SUM(status = 'failed') as failed
-                FROM donglemanager_sms_outbox WHERE DATE(created_at) BETWEEN ? AND ? {$dongleFilter}";
+                FROM donglemanager_sms_outbox WHERE created_at >= ? AND created_at <= ? {$dongleFilter}";
         $stmt = $this->db->prepare($sql);
         $stmt->execute($baseParams);
         $outboxStats = $stmt->fetch(PDO::FETCH_ASSOC);
         $sent = (int)($outboxStats['total'] ?? 0);
         $failed = (int)($outboxStats['failed'] ?? 0);
 
-        // Get received count
-        $sql = "SELECT COUNT(*) FROM donglemanager_sms_inbox WHERE DATE(received_at) BETWEEN ? AND ? {$dongleFilter}";
+        // Get received count (index-friendly)
+        $sql = "SELECT COUNT(*) FROM donglemanager_sms_inbox WHERE received_at >= ? AND received_at <= ? {$dongleFilter}";
         $stmt = $this->db->prepare($sql);
         $stmt->execute($baseParams);
         $received = (int)$stmt->fetchColumn();
@@ -999,13 +999,13 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
 
         $dongleFilter = $dongle !== 'all' ? ' AND dongle = ?' : '';
 
-        // Daily data
+        // Daily data (index-friendly)
         $sql = "SELECT DATE(created_at) as date, COUNT(*) as count
                 FROM donglemanager_sms_outbox
-                WHERE DATE(created_at) BETWEEN ? AND ? {$dongleFilter}
+                WHERE created_at >= ? AND created_at <= ? {$dongleFilter}
                 GROUP BY DATE(created_at)
                 ORDER BY date";
-        $params = [$dateFrom, $dateTo];
+        $params = [$dateFrom . ' 00:00:00', $dateTo . ' 23:59:59'];
         if ($dongle !== 'all') $params[] = $dongle;
         $stmt = $this->db->prepare($sql);
         $stmt->execute($params);
@@ -1013,10 +1013,10 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
 
         $sql = "SELECT DATE(received_at) as date, COUNT(*) as count
                 FROM donglemanager_sms_inbox
-                WHERE DATE(received_at) BETWEEN ? AND ? {$dongleFilter}
+                WHERE received_at >= ? AND received_at <= ? {$dongleFilter}
                 GROUP BY DATE(received_at)
                 ORDER BY date";
-        $params = [$dateFrom, $dateTo];
+        $params = [$dateFrom . ' 00:00:00', $dateTo . ' 23:59:59'];
         if ($dongle !== 'all') $params[] = $dongle;
         $stmt = $this->db->prepare($sql);
         $stmt->execute($params);
@@ -1100,25 +1100,29 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
                 LEFT JOIN (
                     SELECT dongle, COUNT(*) as sent_count
                     FROM donglemanager_sms_outbox
-                    WHERE DATE(created_at) BETWEEN ? AND ?
+                    WHERE created_at >= ? AND created_at <= ?
                     GROUP BY dongle
                 ) s ON d.device = s.dongle
                 LEFT JOIN (
                     SELECT dongle, COUNT(*) as received_count
                     FROM donglemanager_sms_inbox
-                    WHERE DATE(received_at) BETWEEN ? AND ?
+                    WHERE received_at >= ? AND received_at <= ?
                     GROUP BY dongle
                 ) r ON d.device = r.dongle
                 LEFT JOIN (
                     SELECT dongle, COUNT(*) as failed_count
                     FROM donglemanager_sms_outbox
-                    WHERE DATE(created_at) BETWEEN ? AND ? AND status = 'failed'
+                    WHERE created_at >= ? AND created_at <= ? AND status = 'failed'
                     GROUP BY dongle
                 ) f ON d.device = f.dongle
                 ORDER BY d.device";
 
         $stmt = $this->db->prepare($sql);
-        $stmt->execute([$dateFrom, $dateTo, $dateFrom, $dateTo, $dateFrom, $dateTo]);
+        $stmt->execute([
+            $dateFrom . ' 00:00:00', $dateTo . ' 23:59:59',
+            $dateFrom . ' 00:00:00', $dateTo . ' 23:59:59',
+            $dateFrom . ' 00:00:00', $dateTo . ' 23:59:59'
+        ]);
         $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         // Calculate success rate for each
