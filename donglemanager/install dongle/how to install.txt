@@ -1,0 +1,28 @@
+# 1. Copy module
+cp -r donglemanager /var/www/html/admin/modules/
+# 2. Set ownership
+chown -R asterisk:asterisk /var/www/html/admin/modules/donglemanager
+# 3. Install
+fwconsole ma install donglemanager
+fwconsole reload
+
+
+If you see table errors
+
+php /var/www/html/admin/modules/donglemanager/scripts/create-tables.php
+fwconsole reload
+
+
+Background worker (cron)
+
+(crontab -u asterisk -l 2>/dev/null; echo "* * * * * php /var/www/html/admin/modules/donglemanager/cron/worker.php >> /var/log/dongle-worker.log 2>&1") | crontab -u asterisk -
+
+
+
+Optional – sign module (removes unsigned warning)
+
+cd /usr/src && git clone https://github.com/FreePBX/devtools
+KEY_ID=$(gpg --list-secret-keys --keyid-format SHORT 2>/dev/null | grep sec | head -1 | awk '{print $2}' | cut -d'/' -f2)
+# If no key: gpg --batch --gen-key (interactive, or use sign-module.sh)
+/usr/src/devtools/sign.php /var/www/html/admin/modules/donglemanager --local $KEY_ID
+fwconsole reload

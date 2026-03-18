@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+    <rawname>donglemanager</rawname>
+    <name>Dongle Manager</name>
+    <version>1.0.0</version>
+    <type>admin</type>
+    <category>Admin</category>
+    <description>
+        Web-based management interface for Huawei GSM USB dongles via chan_dongle.
+        Provides dashboard monitoring, SMS send/receive, USSD commands, dongle control,
+        traffic reports with charts, and system logging.
+    </description>
+    <menuitems>
+        <donglemanager>Dongle Manager</donglemanager>
+    </menuitems>
+    <changelog>
+        *1.0.0* Initial release
+    </changelog>
+    <depends>
+        <version>16.0.0</version>
+        <php>7.4</php>
+    </depends>
+    <supported>
+        <version>16.0.0</version>
+    </supported>
+    <license>GPLv3+</license>
+</module>
