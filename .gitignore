@@ -1,0 +1,22 @@
+# PHP (Composer vendor only; donglemanager/assets/vendor is bundled and committed)
+/vendor/
+*.log
+*.cache
+*.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Test coverage
+coverage/

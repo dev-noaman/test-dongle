@@ -1,0 +1,48 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - generic [ref=e4]:
+        - link "FreePBX" [ref=e6] [cursor=pointer]:
+          - /url: "#"
+          - img "FreePBX" [ref=e7]
+        - list [ref=e9]:
+          - listitem [ref=e10]:
+            - link "FreePBX Support" [ref=e11] [cursor=pointer]:
+              - /url: http://www.freepbx.org/support-and-professional-services
+        - list:
+          - listitem
+    - generic [ref=e13]:
+      - generic [ref=e14]:
+        - link [ref=e15] [cursor=pointer]:
+          - /url: "#"
+        - generic [ref=e16]: FreePBX Administration
+      - generic [ref=e17]:
+        - link [ref=e18] [cursor=pointer]:
+          - /url: /ucp
+        - generic [ref=e19]: User Control Panel
+      - generic [ref=e20]:
+        - link [ref=e21] [cursor=pointer]:
+          - /url: https://help.sangoma.com/
+        - generic [ref=e22]: Get Support
+      - generic [ref=e23]: b0oi73lepp8d04va0o31d3aebo
+  - generic [ref=e24]:
+    - separator [ref=e25]
+    - generic [ref=e26]:
+      - link "FreePBX®" [ref=e28] [cursor=pointer]:
+        - /url: http://www.freepbx.org
+        - img "FreePBX®" [ref=e29]
+      - generic [ref=e30]:
+        - link "FreePBX" [ref=e31] [cursor=pointer]:
+          - /url: http://www.freepbx.org
+        - text: is a registered trademark of
+        - link "Sangoma Technologies Inc." [ref=e32] [cursor=pointer]:
+          - /url: http://www.freepbx.org/copyright.html
+        - text: FreePBX 16.0.45 is licensed under the
+        - link "GPL" [ref=e33] [cursor=pointer]:
+          - /url: http://www.gnu.org/copyleft/gpl.html
+        - link "Copyright© 2007-2026" [ref=e34] [cursor=pointer]:
+          - /url: http://www.freepbx.org/copyright.html
+      - generic [ref=e35]:
+        - link "www.sangoma.com":
+          - /url: http://www.sangoma.com
+          - img "www.sangoma.com" [ref=e36] [cursor=pointer]
