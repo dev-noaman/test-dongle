@@ -518,12 +518,12 @@ class DongleWorker
     }
 
     /**
-     * Step 6: Clean old logs
+     * Step 6: Clean old logs (batched to prevent long table locks)
      */
     private function cleanOldLogs()
     {
         try {
-            $sql = "DELETE FROM donglemanager_logs WHERE created_at < DATE_SUB(NOW(), INTERVAL 90 DAY)";
+            $sql = "DELETE FROM donglemanager_logs WHERE created_at < DATE_SUB(NOW(), INTERVAL 90 DAY) LIMIT 1000";
             $stmt = $this->db->prepare($sql);
             $stmt->execute();
             $deleted = $stmt->rowCount();
