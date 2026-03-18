@@ -493,21 +493,26 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
     {
         $data = [];
 
-        // Dongle counts
-        $stmt = $this->db->query("
-            SELECT
-                COUNT(*) as total,
-                SUM(CASE WHEN state IN ('Free', 'Busy') THEN 1 ELSE 0 END) as active,
-                SUM(CASE WHEN state = 'Offline' OR last_seen < DATE_SUB(NOW(), INTERVAL 5 MINUTE) THEN 1 ELSE 0 END) as offline
-            FROM donglemanager_dongles
-        ");
-        $dongleStats = $stmt->fetch(PDO::FETCH_ASSOC);
+        // Query 1: All dongles (used for both counts and list)
+        $stmt = $this->db->query("SELECT device, phone_number, operator, signal_percent, state, last_seen FROM donglemanager_dongles ORDER BY device");
+        $dongles = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        $data['dongles_total'] = (int)($dongleStats['total'] ?? 0);
-        $data['dongles_active'] = (int)($dongleStats['active'] ?? 0);
-        $data['dongles_offline'] = (int)($dongleStats['offline'] ?? 0);
+        $total = count($dongles);
+        $active = 0;
+        $offline = 0;
+        $fiveMinAgo = date('Y-m-d H:i:s', strtotime('-5 minutes'));
 
-        // SMS stats for today (index-friendly)
+        foreach ($dongles as $d) {
+            if (in_array($d['state'], ['Free', 'Busy'])) $active++;
+            if ($d['state'] === 'Offline' || $d['last_seen'] < $fiveMinAgo) $offline++;
+        }
+
+        $data['dongles_total'] = $total;
+        $data['dongles_active'] = $active;
+        $data['dongles_offline'] = $offline;
+        $data['dongles'] = $dongles;
+
+        // Query 2: SMS stats for today (index-friendly)
         $stmt = $this->db->query("
             SELECT
                 (SELECT COUNT(*) FROM donglemanager_sms_outbox WHERE created_at >= CURDATE()) as sent,
@@ -520,26 +525,21 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
         $data['sms_failed_today'] = (int)($smsStats['failed'] ?? 0);
         $data['sms_received_today'] = (int)($smsStats['received'] ?? 0);
 
-        // 7-day chart data
+        // Query 3: 7-day outbox chart
         $stmt = $this->db->query("
-            SELECT
-                DATE(created_at) as date,
-                COUNT(*) as sent
+            SELECT DATE(created_at) as date, COUNT(*) as sent
             FROM donglemanager_sms_outbox
             WHERE created_at >= DATE_SUB(CURDATE(), INTERVAL 7 DAY)
-            GROUP BY DATE(created_at)
-            ORDER BY date
+            GROUP BY DATE(created_at) ORDER BY date
         ");
         $sentData = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
 
+        // Query 4: 7-day inbox chart
         $stmt = $this->db->query("
-            SELECT
-                DATE(received_at) as date,
-                COUNT(*) as received
+            SELECT DATE(received_at) as date, COUNT(*) as received
             FROM donglemanager_sms_inbox
             WHERE received_at >= DATE_SUB(CURDATE(), INTERVAL 7 DAY)
-            GROUP BY DATE(received_at)
-            ORDER BY date
+            GROUP BY DATE(received_at) ORDER BY date
         ");
         $receivedData = $stmt->fetchAll(PDO::FETCH_KEY_PAIR);
 
@@ -553,15 +553,11 @@ class Donglemanager extends \FreePBX_Helpers implements \BMO
         }
         $data['chart_7day'] = $chartData;
 
-        // Dongle list
-        $stmt = $this->db->query("SELECT device, phone_number, operator, signal_percent, state, last_seen FROM donglemanager_dongles ORDER BY device");
-        $data['dongles'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-        // Recent inbox (5 messages)
+        // Query 5: Recent inbox (5 messages)
         $stmt = $this->db->query("SELECT id, dongle, sender, message, received_at FROM donglemanager_sms_inbox ORDER BY received_at DESC LIMIT 5");
         $data['recent_inbox'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-        // Recent USSD (5 entries)
+        // Query 6: Recent USSD (5 entries)
         $stmt = $this->db->query("SELECT id, dongle, command, response, created_at FROM donglemanager_ussd_history ORDER BY created_at DESC LIMIT 5");
         $data['recent_ussd'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
