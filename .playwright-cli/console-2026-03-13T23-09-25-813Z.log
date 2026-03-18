@@ -1,1 +1,0 @@
-[   28664ms] [ERROR] Failed to load translations: SyntaxError: Unexpected token '<', "<!DOCTYPE "... is not valid JSON @ http://[::1]:5175/resources/js/i18n/config.ts?t=1773443167732:33

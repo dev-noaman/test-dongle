@@ -1,4 +1,0 @@
-[   31865ms] [ERROR] Mixed Content: The page at 'https://performance.noaman.cloud/login' was loaded over HTTPS, but requested an insecure XMLHttpRequest endpoint 'http://performance.noaman.cloud/'. This request has been blocked; the content must be served over HTTPS. @ https://performance.noaman.cloud/login:0
-[   31868ms] AxiosError: Network Error
-    at E.onerror (https://performance.noaman.cloud/build/assets/app-BsAMEji-.js:7:6312)
-    at _a.request (https://performance.noaman.cloud/build/assets/app-BsAMEji-.js:9:2094)
